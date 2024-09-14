@@ -81,9 +81,19 @@
 
     .vitals-interior{
       display:grid;
-      grid-template-columns: 97px 192px;
-      grid-template-rows: 36px 32px 32px 32px 32px 36px;
+      grid-template-columns: 93px 192px;
+      grid-template-rows: 30px 32px 32px 32px 32px 36px;
+      
       }
+
+      .vitals-mecha-interior{
+        display:grid;
+        grid-template-columns: 93px 192px;
+        grid-template-rows: 30px 30px 30px 30px;
+        gap: 3px;
+
+        }
+
   .vitals-structure2{
     display: grid;
     grid-template-columns: 11px 290px 19px;

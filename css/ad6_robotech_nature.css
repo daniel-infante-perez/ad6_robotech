@@ -55,6 +55,13 @@
  background-repeat: no-repeat;
  background-size: 93px 35px; 
 }
+
+.nature-demeanor-30{
+   background-image: url("../charSheet/nature-demeanor30.png");
+   background-position: left top;
+   background-repeat: no-repeat;
+   background-size: 93px 30px; 
+  }
 .nature-demeanor-input{
  background-image: url("../charSheet/nature-demeanor-input.png");
  background-position: left top;

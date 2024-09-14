@@ -28,8 +28,28 @@
     text-align: center;
   }
 
+  .gear-trk{
+    background-image: url("../charSheet/gear-trunk.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 40px 30px;    
+    align-items: baseline;
+    padding-top: 7px;
+    text-align: center;
+  }
+
   .gear-end{
     background-image: url("../charSheet/gear-end.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 45px 30px;    
+    align-items: baseline;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  .gear-end-trk{
+    background-image: url("../charSheet/gear-end-trk.png");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 45px 30px;    

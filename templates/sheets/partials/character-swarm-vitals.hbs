@@ -3,16 +3,16 @@
         <div class="vitals-lieutenant-swarm grid-2-2">
           <div class="vitals-interior">
             <div class="grid-1-1" style="padding-top: 12px; padding-left: 15px;" >{{localize "ad6_robotech.sheetText.name"}}</div>
-            <div class="grid-2-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.career"}}</div>
-            <div class="grid-3-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.race"}}</div>
+            <div class="grid-2-1"  style="padding-top: 14px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.career"}}</div>
+            <div class="grid-3-1"  style="padding-top: 15px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.race"}}</div>
 
             <div class="grid-1-2" style="padding-top: 8px; padding-left: 5px;"><h4 class='charname'><input name='name' type='text' value='{{actor.name}}' placeholder='Name'/></h4></div>
-            <div class="grid-2-2" style="padding-top: 3px; padding-left: 5px;"> 
+            <div class="grid-2-2" style="padding-top: 9px; padding-left: 5px;"> 
               <select name="system.career"  class="midwid">
                   {{selectOptions config.careers selected = system.career  localize=true}}
               </select>     
             </div> 
-            <div class="grid-3-2" style="padding-top: 3px; padding-left: 5px;">    
+            <div class="grid-3-2" style="padding-top: 10px; padding-left: 5px;">    
               <select name="system.race"  class="midwid">
                   {{selectOptions config.races selected = system.race  localize=true}}
               </select>  
