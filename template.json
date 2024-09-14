@@ -1,0 +1,165 @@
+{
+    "Actor":{
+        "types":["main","lieutenant","swarm","vehicle"]
+        ,"templates":{
+            "vehicleCommon":{
+                 "scale":""
+                ,"armor":{
+                    "value":0
+                   ,"max":0
+               }
+               ,"structure":{
+                   "value":0
+                  ,"max":0
+              }
+              ,"type":"" 
+              ,"hardpointType":""
+              ,"designation":""
+              ,"resist":0
+              ,"speed":""   
+           }
+           ,"lieutenant-skills":{
+                "attack": 0
+                ,"defend":0
+                ,"redirect":0
+                ,"interact":0
+                ,"assist":0
+            }
+            ,"swarm-details":
+            {
+                 "units": 0
+                ,"dice": 0
+                ,"totalWounds":0
+            }
+            ,"wounds":
+            {
+                 "wnd1": false
+                ,"wnd2": false
+                ,"wnd3": false
+                ,"wnd4": false
+                ,"wnd5": false
+                ,"wnd6": false
+                ,"wnd7": false
+                ,"wnda1": false
+                ,"wnda2": false
+                ,"wnda3": false
+                ,"wnda7": false
+                ,"her1": false
+                ,"her2": false
+                ,"hera2": false
+            }
+            ,"rollInfo":
+            {
+                 "actionPhase":""
+                ,"rollType":""
+            }
+           }
+        
+        ,"main": {
+             "templates":["wounds","rollInfo"]
+            ,"race": ""
+            ,"career": ""
+            ,"rank":
+            {
+                 "rank": ""
+                ,"description": ""
+            }
+            ,"fame":
+            {
+                "rank": ""
+                ,"description": ""
+            }
+            ,"wealth":
+            {
+                "rank": ""
+                ,"description": ""
+            }
+            ,"level": 1
+            ,"buildPonits": 0
+            ,"burnout": 0
+            ,"disposition": {
+                 "name":""
+                ,"used": false
+            }
+            ,"demeanor": {
+                "name":""
+               ,"used": false
+           }
+           ,"speed": 0
+           ,"drama":{
+                "one":""
+                ,"two":""
+                ,"three":""
+           }
+           ,"proficiency":
+           {
+             "one":""
+            ,"two":""
+            ,"three":""
+            ,"four":""
+            ,"five":""
+            ,"six":""
+           }    
+           ,"element":
+           {
+             "one":""
+            ,"two":""
+            ,"three":""
+            ,"four":""
+            ,"five":""
+            ,"six":""
+           }                   
+           ,"fatigue1": ""
+           ,"fatigue2": ""
+           ,"fatigue3": ""
+           ,"fatigue4": ""
+           ,"fatigue5": ""
+           ,"bio": ""
+
+
+          }      
+       ,"lieutenant"  :
+       {
+            "templates":["lieutenant-skills","wounds","rollInfo"]
+
+       }
+       ,"swarm":
+       {
+            "templates":["swarm-details","rollInfo"]
+       }
+        ,"vehicle":{
+             "templates":["vehicleCommon","lieutenant-skills","swarm-details","rollInfo"]
+        }
+        
+
+    }
+   ,"Item" :{
+         "types":["skill","gear", "equipmentsuite","talent"]
+        ,"templates":{
+             "itemdescription":{ "description":"", "image":"" }
+            ,"hardware": { "hardware": false , "status": true }
+            ,"object": { "requisition": "" ,"range": "" ,"damage": "" ,"pen":"" ,"aoe":"" ,"ext":"" }
+            ,"configinfo": {"intname": "", "intdesc": "", "intcad1": "", "intcad2":""}
+        }
+        ,"skill":{
+             "templates": ["itemdescription", "configinfo"]
+            ,"cost":""
+            ,"benefit":""
+            ,"skill": 0 }
+        ,"gear":{
+            "templates": ["itemdescription", "hardware","object", "configinfo"]
+           
+        }
+        ,"equipmentsuite":{
+            "templates": ["itemdescription","hardware","object", "configinfo"]
+           ,"value": 0
+           ,"max": 0
+           ,"skill":0
+        }
+        ,"talent":{
+            "templates": ["itemdescription", "configinfo"]
+           ,"value": 0
+           ,"max": 0
+        }
+   }
+}

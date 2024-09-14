@@ -1,0 +1,33 @@
+ <div class="tab items" data-group="primary" data-tab="equipment">
+              {{#if gears }}
+              <div style="display: grid; gap:3px;">
+                <div class="gear-header">
+                  <div class="gear-header-name"></div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.rng"}}</div>
+                  <div class="gear-header-mid">{{ localize "ad6_robotech.sheetText.ext"}}</div>
+                  <div class="gear-header-mid">{{ localize "ad6_robotech.sheetText.dmg"}}</div>
+                  <div class="gear-header-mid">{{ localize "ad6_robotech.sheetText.pen"}}</div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.aoe"}}</div>
+                </div>
+                {{#each gears as |gear id|}}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-gear.hbs" gear}}
+                {{/each}}
+              </div>
+              {{/if}}
+              {{#if suites }}
+              <div style="display: grid; gap:3px;">
+                <div class="suite-header">
+                  <div class="gear-header-name"></div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.skill"}}</div>
+                  <div class="gear-header-mid">{{ localize "ad6_robotech.sheetText.uses"}}</div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.left"}}</div>
+                </div>
+                {{#each suites as |suite id|}}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-equipmentsuite.hbs" suite}}
+                {{/each}}
+              </div>
+              {{/if}}
+
+
+
+          </div>

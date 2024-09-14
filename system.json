@@ -1,0 +1,36 @@
+{
+    "id": "ad6_robotech",
+    "title": "Robotech Advantage6",
+    "description": "The Robotech Advantage6 for FoundryVTT!",
+    "authors": [
+      {
+        "name": "Daniel Infante",
+        "discord": "daxos_ludocronicas",
+        "email": "daniel@ludocronicas.org",
+        "url": "https://ludocronicas.org",
+        "flags": {}
+      }
+    ],
+    "version": "1.0.0",
+    "compatibility": {
+      "minimum": 11,
+      "verified": "12"
+    },
+    "esmodules": ["module/ad6_robotech.mjs"],
+    "styles": ["css/ad6_robotech.css"],
+    "languages": [
+      {
+        "lang": "en",
+        "name": "English",
+        "path": "lang/en.json"
+      }
+      ,{
+        "lang": "es",
+        "name": "Spanish",
+        "path": "lang/es.json"
+      }
+    ],
+    "packs": [],
+    "packFolders": []
+  }
+  

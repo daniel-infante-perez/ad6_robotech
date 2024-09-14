@@ -1,0 +1,70 @@
+.nature-structure-main
+{
+   display:grid;
+   grid-template-columns: 300px;
+   grid-template-rows: 28px;
+}
+
+.nature-structure-inner
+{
+ display:grid;
+ grid-template-columns: 93px 204px;
+ grid-template-rows: 30px 35px;
+ gap: 3px;
+}
+
+.nature-structure-deep
+{
+ display:grid;
+ grid-template-columns: 181px 23px;
+}
+
+.nature-header
+{
+ background-image: url("../charSheet/nature-header.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 300px 28px; 
+}
+
+.nature-disposition-lbl
+{
+ background-image: url("../charSheet/nature-disposition-lbl.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 93px 30px; 
+}
+
+.nature-disposition-input{
+ background-image: url("../charSheet/nature-disposition-input.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 181px 30px; 
+}
+.nature-disposition-chk{
+ background-image: url("../charSheet/nature-disposition-chk.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 23px 30px; 
+}
+
+
+.nature-demeanor-lbl{
+ background-image: url("../charSheet/nature-demeanor-lbl.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 93px 35px; 
+}
+.nature-demeanor-input{
+ background-image: url("../charSheet/nature-demeanor-input.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 181px 35px; 
+}
+
+.nature-demeanor-chk{
+ background-image: url("../charSheet/nature-demeanor-chk.png");
+ background-position: left top;
+ background-repeat: no-repeat;
+ background-size: 23px 35px; 
+}

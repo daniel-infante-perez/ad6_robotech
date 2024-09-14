@@ -1,0 +1,7 @@
+<div class="chat-frame" style="display: block; background-color: white;">
+    <div style="padding-left:13px; padding-top: 20px"><strong>{{ name }}</strong> </div>
+    <div style="padding-left:13px;">
+        {{#if verbose}}{{editor description target="description" button=false}} {{/if}}
+        {{#if (eq verbose false)}}{{description}} {{/if}}
+    </div>
+</div>

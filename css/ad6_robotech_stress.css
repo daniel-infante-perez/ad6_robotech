@@ -1,0 +1,98 @@
+/* localización propia */
+.stress-location-header{grid-row: 1; grid-column: 1/ span 6;}
+.burnout-location-left{grid-row:1/ span 3; grid-column: 1;}
+.burnout-location-right{grid-row:1/ span 3; grid-column: 3;}
+
+.stress-structure-main{
+    display: grid;
+    grid-template-columns: 45px 42px 40px 40px 44px 223px;
+    grid-template-rows: 42px 40px;
+  }
+
+  .stress-header{
+    background-image: url("../charSheet/stress-header.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 434px 42px;    
+  }
+
+  .stress-d1
+  {
+    background-image: url("../charSheet/d1.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 45px 40px;    
+  }
+
+  .stress-d2
+  {
+    background-image: url("../charSheet/d2.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 42px 40px;    
+  }
+
+  .stress-d3
+  {
+    background-image: url("../charSheet/d3.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;    
+  }
+
+  .stress-d4
+  {
+    background-image: url("../charSheet/d4.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 40px 40px;    
+  }
+
+  .stress-d5
+  {
+    background-image: url("../charSheet/d5.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 44px 40px;    
+  }
+
+  .stress-structure{
+    display: grid;
+    grid-template-columns: 434px 78px;
+    grid-template-rows: auto;
+  }
+  .burnout-structure{
+    display: grid;
+    grid-template-columns: 23px 32px 23px;
+    grid-template-rows: 35px 38px 10px;
+  }
+
+
+  .burnout-left
+  {
+    background-image: url("../charSheet/stress-left.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 23px 82px;    
+  }
+  .burnout-right
+  {
+    background-image: url("../charSheet/stress-right.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 23px 82px;    
+  }
+  .burnout-top
+  {
+    background-image: url("../charSheet/stress-top.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 32px 35px;    
+  }
+  .burnout-bottom
+  {
+    background-image: url("../charSheet/stress-bottom.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 32px 9px;    
+  }  

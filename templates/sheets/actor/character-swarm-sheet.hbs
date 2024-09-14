@@ -1,0 +1,77 @@
+<div style="background-color: white;">
+<form class='{{cssClass}}' autocomplete='off'>
+  <header class='sheet-header'>
+    <!--<img
+      class='profile-img'
+      src='{{actor.img}}'
+      data-edit='img'
+      title='{{actor.name}}'
+    />-->
+    <div class='header-fields'>
+     
+    </div>
+  </header>
+  <div class="swarm-structure" style="padding-bottom:10px;">
+      <div class="vitals-structure2 grid-1-1">
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-swarm-vitals.hbs"}}
+      </div>  
+      <div class="stress-structure grid-1-2">
+          <div style="display:grid; grid-template-columns: 90px 90px 90px">
+            <div class="grid-1-1" style="display:block;">
+              {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex11 }}    
+            </div>
+            <div class="grid-1-2" style="display:block;">
+              {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex9 }}    
+            </div>
+            <div class="grid-1-3" style="display:block">
+              {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex10 }}    
+              
+            </div>
+          </div>
+      </div>
+      <div class="grid-1-3">
+        <img
+      class='profile-img' width="150"
+      src='{{actor.img}}'
+      data-edit='img'
+      title='{{actor.name}}'
+    />
+      </div>
+  </div>
+   <div>
+    {{> "systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs"}}
+  </div>
+
+    
+<div class="second-lieutenant">
+  
+  <div class="grid-1-1" style="max-height: 300px; overflow-y:scroll; overflow-x: hidden;">
+    <div class="nav-structure">
+      <div class="nav-header grid-header">
+
+          <nav class="sheet-tabs" style="border: 0px solid; " data-group="primary">
+              <span style="padding-left: 95px"></span>
+              <a class="item" data-tab="equipment"><strong>{{ localize "ad6_robotech.sheetText.equipment" }}</strong></a>
+          </nav>
+
+      </div>
+      <div class="vitals-left grid-2-1"></div>
+      <div class="grid-2-2" style="padding: 5px;">
+          <section class="sheet-body" >
+            {{> "systems/ad6_robotech/templates/sheets/partials/character-section-items.hbs"}}
+          </section>
+
+      </div>
+      <div class="vitals-right grid-2-3"></div>
+    </div>
+
+  </div>
+  <div class="grid-1-2">
+
+  </div>
+    
+</div>
+
+
+</form>
+</div>

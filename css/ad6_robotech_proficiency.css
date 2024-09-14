@@ -1,0 +1,31 @@
+
+
+.prof-structure{
+    display:grid;
+    grid-template-columns: 299px;
+    grid-template-rows: 28px auto;
+  
+  }
+  .prof-structure-inner{
+    display:grid;
+    grid-template-columns: 148px 148px;
+    grid-template-rows: 30px 30px 30px;
+    gap: 3px;
+  }
+  
+  .prof-left{
+    background-image: url("../charSheet/prof-left.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 148px 30px; 
+    padding-left: 10px;
+  }
+  
+  .prof-right{
+    background-image: url("../charSheet/prof-right.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 148px 30px; 
+    padding-left: 5px;
+  }
+  

@@ -1,0 +1,11 @@
+<div class="chat-frame" style="display: block;  background-color: white;">
+    <div style="padding-left:13px; padding-top: 20px">{{ owner }} {{ localize "ad6_robotech.message.uses"}} <strong>{{ name }}</strong> </div>
+    <div style="padding-left:13px;">{{ message }}</div>
+    <div style="padding-left:13px;"> {{ localize "ad6_robotech.message.rolltype"}}: {{ rollType }} - {{ localize "ad6_robotech.message.phase"}}:  {{ actionPhase }}</div>
+    <div style="padding-left:13px;"> <strong>{{ successes }}</strong> {{ localize "ad6_robotech.message.successes"}}</div>
+    <div style="padding-left:13px;">
+            {{#each dice as | die | }}
+            <div class ="dice-{{die.total}}" style="height:30px; width: 30px; text-align: center;"></div>
+            {{/each}}
+    </div>
+</div>

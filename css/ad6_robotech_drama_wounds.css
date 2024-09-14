@@ -1,0 +1,121 @@
+
+.drama-structure
+{
+  display:grid;
+  grid-template-columns: 60px 250px;
+  grid-template-rows: auto;
+  gap: 5px;
+  align-items: baseline;
+}
+
+.drama-internal
+{
+  display:grid;
+  grid-template-columns: 60px 250px;
+  grid-template-rows: 30px 30 px;
+}
+.drama-bck
+{
+  background-image: url("../charSheet/grid-drama2.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 328px 92px; 
+}
+
+.wounds-structure{
+  display:grid;
+  grid-template-columns: 50px 48px 50px 45px 40px 46px 48px 20px;
+  grid-template-rows: 41px 30px 20px;
+}
+
+
+.wounds-1-1{
+  background-image: url("../charSheet/wnd1-1.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 50px 30px;   
+  padding-left: 20px;
+}
+.wounds-2-1{
+  background-image: url("../charSheet/wnd2-1.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 48px 30px;    
+  padding-left: 20px;
+}
+.wounds-3-1{
+  background-image: url("../charSheet/wnd3-1.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 50px 30px; 
+  padding-left: 20px;   
+}
+.wounds-4{
+  background-image: url("../charSheet/wnd4.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 45px 50px;  
+  padding-left: 20px;  
+}  
+.wounds-5{
+  background-image: url("../charSheet/wnd5.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 40px 50px;    
+  padding-left: 20px;
+}  
+.wounds-6{
+  background-image: url("../charSheet/wnd6.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 46px 50px;   
+  padding-left: 20px; 
+}  
+.wounds-7-1{
+  background-image: url("../charSheet/wnd7-1.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 48px 30px; 
+  padding-left: 20px;   
+}  
+.wounds-right{
+  background-image: url("../charSheet/wnd-right.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 20px 50px;    
+  padding-left: 20px;
+}  
+.wounds-header{
+  background-image: url("../charSheet/wnd-header.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 348px 41px;        
+}  
+.wounds-1-2{
+  background-image: url("../charSheet/wnd1-2.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 50px 20px;   
+  padding-left: 20px; 
+}
+.wounds-2-2{
+  background-image: url("../charSheet/wnd2-2.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 48px 20px;   
+  padding-left: 20px; 
+}
+.wounds-3-2{
+  background-image: url("../charSheet/wnd3-2.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 50px 20px;   
+  padding-left: 20px; 
+}
+.wounds-7-2{
+  background-image: url("../charSheet/wnd7-2.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 48px 20px;  
+  padding-left: 20px;  
+}  

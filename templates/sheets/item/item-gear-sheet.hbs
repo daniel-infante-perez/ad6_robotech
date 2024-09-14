@@ -1,0 +1,57 @@
+<div style="background-color: white;">
+    <form class='{{cssClass}}' autocomplete='off'>
+    <header class='sheet-header'>
+        <div class='header-fields'>
+        <h1 class='charname'><input
+            name='name'
+            type='text'
+            value='{{item.name}}'
+            placeholder='Name'
+            /></h1>
+        </div>
+    </header>
+
+    <div class="nav-structure">
+        {{> "systems/ad6_robotech/templates/sheets/partials/item-nav.hbs"}}
+        <div class="vitals-left grid-2-1"></div>
+        <div class="grid-2-2" style="padding: 5px;">
+            <section class="sheet-body" >
+                <div class="tab general" data-group="primary" data-tab="general">
+                    <div class="skill-item-structure">
+                        <div class="grid-1-1">{{ localize "ad6_robotech.sheetText.reqExp"}}</div>
+                        <div class="grid-1-3">{{ localize "ad6_robotech.sheetText.rngExp"}}</div>
+                        <div class="grid-2-1">{{ localize "ad6_robotech.sheetText.extExp"}}</div>
+                        <div class="grid-3-1">{{ localize "ad6_robotech.sheetText.dmgExp"}}</div>
+                        <div class="grid-2-3">{{ localize "ad6_robotech.sheetText.penExp"}}</div>
+                        <div class="grid-3-3">{{ localize "ad6_robotech.sheetText.aoeExp"}}</div>
+                        <div class="grid-4-1">{{ localize "ad6_robotech.sheetText.hardExp"}}</div>
+                        <div class="grid-4-3">{{ localize "ad6_robotech.sheetText.statExp"}}</div>
+
+                        <div class="grid-1-2"><input class="transinput uffwid" name="system.requisiton" value="{{system.requisiton}}" data-dtype="String"/></div>
+                        <div class="grid-1-4">
+                          <select name="system.range">
+                              {{selectOptions config.ranges selected = system.range  localize=true}}
+                          </select>  
+                        </div>
+                        <div class="grid-2-2"><input class="transinput uffwid" name="system.ext" value="{{system.ext}}" data-dtype="String"/></div>
+                        <div class="grid-3-2"><input class="transinput uffwid" name="system.damage" value="{{system.damage}}" data-dtype="String"/></div>
+                        <div class="grid-2-4"><input class="transinput uffwid" name="system.pen" value="{{system.pen}}" data-dtype="String"/></div>
+                        <div class="grid-3-4"><input class="transinput uffwid" name="system.aoe" value="{{system.aoe}}" data-dtype="String"/></div>
+                        <div class="grid-4-2"><input name="system.hardware" type="checkbox" {{checked system.hardware}}/></div>
+                        <div class="grid-4-4"><input name="system.status" type="checkbox" {{checked system.status}}/></div>
+                    </div>
+                    <div>{{editor system.description target="system.description" button=true}} </div>
+                </div>
+             {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}
+            
+            </section>
+        </div>
+
+    
+        <div class="vitals-right grid-2-3"></div>
+    </div>    
+    </form>
+
+</div>
+
+          

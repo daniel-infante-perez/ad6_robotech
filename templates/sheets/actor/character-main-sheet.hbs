@@ -1,0 +1,106 @@
+<div style="background-color: white;">
+<form class='{{cssClass}}' autocomplete='off'>
+  <header class='sheet-header'>
+    <!--<img
+      class='profile-img'
+      src='{{actor.img}}'
+      data-edit='img'
+      title='{{actor.name}}'
+    />-->
+    <div class='header-fields'>
+     
+    </div>
+  </header>
+  <div class="main-structure" style="padding-bottom:10px;">
+      <div class="vitals-structure2 grid-1-sp3-1">
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-vitals.hbs"}}
+      </div>  
+      <div class="stress-structure grid-1-2-sp2">
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-stress.hbs"}}
+      </div>
+      <div class="grid-2-2">
+        <div class="drama-structure drama-bck">
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-drama.hbs"}}
+        </div>
+      </div>
+      <div class="grid-3-2">
+        <div class="wounds-structure">
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-wounds.hbs"}}
+        </div>
+      </div>
+      <div class="grid-2-sp2-3">
+        <img
+      class='profile-img' width="150"
+      src='{{actor.img}}'
+      data-edit='img'
+      title='{{actor.name}}'
+    />
+      </div>
+  </div>
+
+    
+<div class="second-structure">
+  <div class="grid-1-1" style="display:block;">
+    {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex6 }}
+    
+  </div>
+  <div class="grid-1-2" style="display:block">
+    {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex7}}
+    
+  </div>
+  <div class="grid-1-3" style="display:block">
+    {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex8}}
+    
+  </div>
+  <div class="grid-1-4"></div>
+  <div class="grid-1-5">
+    {{> "systems/ad6_robotech/templates/sheets/partials/character-heroic.hbs"}}
+  </div>
+  <div class="grid-1-6">
+    {{> "systems/ad6_robotech/templates/sheets/partials/character-nature.hbs"}}
+  </div>
+<div class="grid-2-1-sp5" style="max-height: 300px; overflow-y:scroll; overflow-x: hidden;">
+  <div class="nav-structure">
+    <div class="nav-header grid-header">
+
+        <nav class="sheet-tabs" style="border: 0px solid; " data-group="primary">
+            <span style="padding-left: 95px"></span>
+            <a class="item" data-tab="skills"><strong>{{ localize "ad6_robotech.sheetText.skills" }}</strong></a>
+            <a class="item" data-tab="talents"><strong>{{ localize "ad6_robotech.sheetText.talents" }}</strong></a>
+            <a class="item" data-tab="equipment"><strong>{{ localize "ad6_robotech.sheetText.equipment" }}</strong></a>
+            <a class="item" data-tab="description"><strong>{{ localize "ad6_robotech.sheetText.bio" }}</strong></a>
+
+        </nav>
+
+    </div>
+    <div class="vitals-left grid-2-1"></div>
+    <div class="grid-2-2" style="padding: 5px;">
+        <section class="sheet-body" >
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-section-skills.hbs"}}
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-section-talents.hbs"}}
+          {{> "systems/ad6_robotech/templates/sheets/partials/character-section-items.hbs"}}
+          <div class="tab biography" data-group="primary" data-tab="description">
+            {{editor system.bio target="system.bio" button=true}}
+          </div>
+        </section>
+
+    </div>
+    <div class="vitals-right grid-2-3"></div>
+  </div>
+
+</div>
+  <div class="grid-2-6" >
+    <div>
+      {{> "systems/ad6_robotech/templates/sheets/partials/character-elements.hbs"}}
+      <br/>
+      {{> "systems/ad6_robotech/templates/sheets/partials/character-proficiency.hbs"}}
+    </div>
+  </div>
+  <div class="grid-3-1-sp6">
+    {{> "systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs"}}
+  </div>
+</div>
+
+
+</form>
+</div>

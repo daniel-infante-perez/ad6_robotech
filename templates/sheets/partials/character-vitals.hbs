@@ -1,0 +1,41 @@
+        <div class="vitals-header grid-header" style="padding-left: 110px;"><strong>{{localize "ad6_robotech.sheetText.vitals"}}</strong></div>
+        <div class="vitals-left grid-2-1"></div>
+        <div class="vitals-panel2 grid-2-2">
+          <div class="vitals-interior">
+            <div class="grid-1-1" style="padding-top: 12px; padding-left: 15px;" >{{localize "ad6_robotech.sheetText.name"}}</div>
+            <div class="grid-2-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.career"}}</div>
+            <div class="grid-3-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.race"}}</div>
+            <div class="grid-4-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.rank"}}</div>
+            <div class="grid-5-1" style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.fame"}}</div>
+            <div class="grid-6-1" style="padding-top: 12px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.wealth"}}</div>
+
+            <div class="grid-1-2" style="padding-top: 8px; padding-left: 5px;"><h4 class='charname'><input name='name' type='text' value='{{actor.name}}' placeholder='Name'/></h4></div>
+            <div class="grid-2-2" style="padding-top: 3px; padding-left: 5px;"> 
+              <select name="system.career"  class="midwid">
+                  {{selectOptions config.careers selected = system.career  localize=true}}
+              </select>     
+            </div> 
+            <div class="grid-3-2" style="padding-top: 3px; padding-left: 5px;">    
+              <select name="system.race"  class="midwid">
+                  {{selectOptions config.races selected = system.race  localize=true}}
+              </select>  
+            </div>
+            <div class="grid-4-2" style="padding-top: 3px; padding-left: 5px;">    
+              <select name="system.rank.rank" class="smawid">
+                  {{selectOptions config.ranks selected = system.rank.rank  localize=false}}
+              </select>   <input class="menwid invinput fnt" name="system.rank.description" value="{{system.rank.description}}" data-dtype="String"/>
+            </div>
+            <div class="grid-5-2" style="padding-top: 3px; padding-left: 5px;">    
+              <select name="system.fame.rank" class="smawid">
+                  {{selectOptions config.fames selected = system.fame.rank  localize=false}}
+              </select>   <input class="menwid invinput" name="system.fame.description" value="{{system.fame.description}}" data-dtype="String"/>
+            </div>
+            <div class="grid-6-2" style="padding-top: 3px; padding-left: 5px;">    
+              <select name="system.wealth.rank" class="smawid">
+                  {{selectOptions config.wealths selected = system.wealth.rank  localize=false}}
+              </select>   <input class="menwid invinput" name="system.wealth.description" value="{{system.wealth.description}}" data-dtype="String"/>
+
+            </div>
+          </div>
+        </div>
+        <div class="vitals-right grid-2-3"></div>

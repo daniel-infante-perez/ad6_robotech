@@ -1,0 +1,155 @@
+{
+
+    "ad6_robotech":
+    {
+        "phase":{
+            "support": "Soporte"
+            ,"assist": "Asistencia"
+            ,"obscure": "Ocultamiento"
+            ,"attack": "Ataque"
+            ,"defend": "Defensa"
+            ,"redirect": "Redirección"
+            ,"inhibit": "Inhibición"
+            ,"interact": "Interacción"
+        }
+        ,"rollT":
+        {
+            "advantage": "Ventaja"
+            ,"edge": "Apoyo"
+            ,"normal": "Normal"
+            ,"hindrance": "Obstáculo"
+            ,"disadvantage": "Desventaja"
+        }
+
+        ,"range":
+        {
+             "": ""
+            ,"none":""
+            ,"melee": "Cuerpo a Cuerpo [Me]"
+            ,"short": "Corto [S]"
+            ,"medium": "Medio [M]"
+            ,"long": "Largo [L]"
+            ,"extreme": "Extremo [E]" 
+        }
+        ,"scaleClass":
+        {
+             "light": "Ligero"
+            ,"mecha": "Mecha"
+            ,"naval": "Naval"
+        }
+        ,"vehicleType":
+        {
+             "main": "Principal"
+            ,"lieutenant": "Teniente"
+            ,"swarm": "Enjambre"
+        }
+        ,"framework":
+        {
+            "basic": "Básico"
+            ,"complex": "Complejo"
+        }
+        ,"race":
+        {
+             "human": "Humano"
+            ,"zentraedi": "Zentraedi"
+            ,"tirolian": "Tirolian"
+            ,"invid": "Invid"
+        }
+        ,"career":
+        {
+             "pilot": "Piloto"
+            ,"officer": "Oficial"
+            ,"technician": "Técnico"
+            ,"entertainer": "Animador"
+            ,"spy": "Espía"
+            ,"marine": "Marine"
+            ,"volunteer": "Voluntario"
+            ,"nomad": "Nómada"
+            ,"triumvirate": "Triunvirato"
+        }
+        ,"sheetText":
+        {
+             "name": "Nombre"
+            ,"career": "Carrera"
+            ,"race": "Especie"
+            ,"rank": "Rango"
+            ,"fame": "Fama"
+            ,"wealth": "Fortuna"
+            ,"vitals": "VITALES"
+            ,"stress": "ESTRÉS"
+            ,"burnout": "Agotado"
+            ,"wounds": "HERIDAS"
+            ,"heroicMove": "MOV. HERÓICO"
+            ,"level": "Nivel"
+            ,"buildPoints": "Puntos Constr."
+            ,"speed": "Velocidad"
+            ,"nature": "NATURALEZA"
+            ,"disposition": "Disposición"
+            ,"demeanor": "Conducta"
+            ,"drama1": "Drama 1"
+            ,"drama2": "Drama 2"
+            ,"drama3": "Drama 3"
+            ,"proficiencies": "COMPETENCIAS"
+            ,"elements": "ELEMENTOS"
+            ,"skills": "HABILIDADES"
+            ,"talents": "TALENTOS"
+            ,"equipment": "EQUIPO"
+            ,"bio": "BIO & NOTAS"
+            ,"rng": "Rng"
+            ,"ext": "Ext"
+            ,"dmg": "Dño"
+            ,"pen": "Pen"
+            ,"aoe": "AdE"
+            ,"skill": "Hab."
+            ,"uses": "Usos"
+            ,"left": "Rest."
+            ,"cost": "Costo"
+            ,"benefit": "Beneficio"
+            ,"value": "Valor"
+            ,"description": "Descripción"
+            ,"custom1": "Cadena 1"
+            ,"custom2": "Cadena 2"
+            ,"icon": "Imagen"
+            ,"reqExp": "Requisición"
+            ,"rngExp": "Rango"
+            ,"extExp": "Extendido"
+            ,"dmgExp": "Daño"
+            ,"penExp": "Perfora Armadura"
+            ,"aoeExp": "Área de Efecto"
+            ,"skillExp": "Habilidad"
+            ,"usesExp": "Cantidad Usos"
+            ,"leftExp": "Usos Restantes"
+            ,"hardExp": "Sistema"
+            ,"statExp": "Estado"
+            ,"attack": "Atacar"
+            ,"defend": "Defender"
+            ,"redirect": "Redirigir"
+            ,"assist": "Asistir"
+            ,"interact": "Interactuar"
+            ,"units": "Unidades"
+            ,"dice": "Dados"
+            ,"totalWounds": "Heridas"
+            ,"cantUseTitle":"¡No se puede usar!"
+            ,"cantUseDesc":"No le quedan usos disponibles. No se puede usar."
+            ,"designation": "Designación"
+            ,"scale": "Escala"
+            ,"sheetType": "Tipo"
+            ,"framework": "Infraestructura"
+            ,"vessel":"VEHÍCULO"
+            ,"framework2":"INFRAESTRUCTURA"
+            ,"armor": "Armadura"
+            ,"structure": "Estructura"
+            ,"resist": "Resiste"
+
+        }
+        ,"message":
+        {
+            "uses": "usa"
+            ,"with": "con"
+            ,"phase": "Fase"
+            ,"successes": "Éxitos"
+            ,"rolltype": "Tipo"
+        }
+
+    }
+}

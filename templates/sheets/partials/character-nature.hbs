@@ -1,0 +1,15 @@
+    <div class="nature-structure-main">
+      <div class="grid-1-1 nature-header" style="padding-left: 95px"><strong>{{ localize "ad6_robotech.sheetText.nature"}}</strong></div>
+      <div class="grid-2-1 nature-structure-inner">
+        <div class="grid-1-1 nature-disposition-lbl" style="padding-left: 8px; padding-top: 6px">{{ localize "ad6_robotech.sheetText.disposition"}}</div>
+        <div class="grid-1-2 nature-structure-deep">
+            <div class="grid-1-1 nature-disposition-input"><input class="mehwid transinput fnt" name="system.disposition.name" value="{{system.disposition.name}}" data-dtype="String"/></div>
+            <div class="grid-1-2 nature-disposition-chk"><input class="smachk" type="checkbox" name="system.disposition.used" {{checked system.disposition.used}}/></div>
+        </div>        
+        <div class="grid-2-1 nature-demeanor-lbl" style="padding-left: 8px; padding-top: 6px">{{ localize "ad6_robotech.sheetText.demeanor"}}</div>
+        <div class="grid-2-2 nature-structure-deep">
+          <div class="grid-1-1 nature-demeanor-input"><input style="padding: 5px;" class="mehwid transinput fnt" name="system.demeanor.name" value="{{system.demeanor.name}}" data-dtype="String"/></div>
+          <div class="grid-1-2 nature-demeanor-chk"><input class="smachk" type="checkbox" name="system.demeanor.used" {{checked system.demeanor.used}}/></div>
+        </div>
+      </div>
+    </div>

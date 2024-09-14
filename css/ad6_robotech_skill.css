@@ -1,0 +1,62 @@
+
+.skill-structure
+{
+  display:grid;
+  grid-template-columns: 200px 136px 132px 45px ;
+  grid-template-rows: 30px;
+  gap: 3px;
+}
+.skill-header
+{
+  display:grid;
+  grid-template-columns: 200px 136px 132px 45px ;
+  grid-template-rows: 10px;
+  gap: 3px;
+}
+.skill-name{
+  background-image: url("../charSheet/skill-name.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 200px 30px;    
+  align-items: baseline;
+  padding-top: 7px;
+}
+
+.skill-benefit{
+  background-image: url("../charSheet/skill-benefit.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 136px 30px;    
+  align-items: baseline;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+.skill-cost{
+  background-image: url("../charSheet/skill-cost.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 132px 30px;    
+  align-items: baseline;
+  padding-top: 7px;
+  padding-left: 10px;
+}
+
+.skill-item-conf-structure
+{
+    display:grid;
+    grid-template-columns: 90px auto ;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 3px;
+    align-items: baseline;
+}
+
+
+.skill-item-structure
+{
+    display:grid;
+    grid-template-columns: 90px auto ;
+    grid-template-rows: auto auto auto;
+    gap: 3px;
+    align-items: baseline;
+}

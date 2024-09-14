@@ -1,0 +1,26 @@
+
+.third-structure
+{
+  display:grid;
+  grid-template-columns: 316px 557px;
+  grid-template-rows: 186px;
+}
+.third-left{
+  background-image: url("../charSheet/Originals/Successes.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 316px 186px;    
+}
+
+.third-left-small{
+    background-image: url("../charSheet/Originals/Successes.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 284px 167px;    
+  }
+.third-right{
+  background-image: url("../charSheet/Originals/ActionPhases.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 557px 112px;    
+}

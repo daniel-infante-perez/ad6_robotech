@@ -1,0 +1,91 @@
+/* Hoja principal - datos vitales*/
+
+.grid-header{grid-row: 1; grid-column: 1/ span 3;}
+
+.vitals-header{
+    background-image: url("../charSheet/vitals-header.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 322px 38px;    
+  }
+  .vitals-left{
+    background-image: url("../charSheet/vitals-left.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 11px 183px;
+  }
+  .vitals-right{
+    background-image: url("../charSheet/vitals-right.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 19px 77px;
+  }
+  .vitals-structure{
+    display: grid;
+    grid-template-columns: 11px 290px 19px;
+    grid-template-rows: 38px auto;
+  }
+
+  .vitals-panel{
+    display: grid;
+    column-gap: 1px;
+    row-gap: 1px;
+    grid-template-columns: 60px 210px;
+    grid-template-rows: auto auto auto auto auto auto;
+    align-items: baseline;
+  }
+
+
+  .vitals-panel2{
+    
+    background-image: url("../charSheet/vitals-grid.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 289px 203px;
+    }
+
+    
+  .vitals-lieutenant{
+    
+    background-image: url("../charSheet/vitals-lieutenant.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 289px 203px;
+    }
+
+    .vitals-mecha{
+    
+      background-image: url("../charSheet/vitals-mecha.png");
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: 289px 132px;
+      }
+  
+  
+
+        
+  .vitals-lieutenant-swarm{
+    
+    background-image: url("../charSheet/vitals-swarm.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 289px 101px;
+    }
+
+    .vitals-left-swarm{
+      background-image: url("../charSheet/vitals-swarm-left.png");
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: 11px 77px;
+    }
+
+    .vitals-interior{
+      display:grid;
+      grid-template-columns: 97px 192px;
+      grid-template-rows: 36px 32px 32px 32px 32px 36px;
+      }
+  .vitals-structure2{
+    display: grid;
+    grid-template-columns: 11px 290px 19px;
+    grid-template-rows: 38px 203px;
+  }

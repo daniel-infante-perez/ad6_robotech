@@ -1,0 +1,29 @@
+        <div class="vitals-header grid-header" style="padding-left: 110px;"><strong>{{localize "ad6_robotech.sheetText.vessel"}}</strong></div>
+        <div class="vitals-left grid-2-1"></div>
+        <div class="vitals-mecha grid-2-2">
+          <div class="vitals-interior">
+            <div class="grid-1-1" style="padding-top: 12px; padding-left: 15px;" >{{localize "ad6_robotech.sheetText.name"}}</div>
+            <div class="grid-2-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.scale"}}</div>
+            <div class="grid-3-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.sheetType"}}</div>
+            <div class="grid-4-1"  style="padding-top: 8px; padding-left: 15px;">{{localize "ad6_robotech.sheetText.framework"}}</div>
+
+            <div class="grid-1-2" style="padding-top: 8px; padding-left: 5px;"><h4 class='charname'><input name='name' type='text' value='{{actor.name}}' placeholder='Name'/></h4></div>
+            <div class="grid-2-2" style="padding-top: 3px; padding-left: 5px;"> 
+              <select name="system.scale"  class="midwid">
+                  {{selectOptions config.scaleClasses selected = system.scale  localize=true}}
+              </select>     
+            </div> 
+            <div class="grid-3-2" style="padding-top: 3px; padding-left: 5px;">    
+              <select name="system.type"  class="midwid">
+                  {{selectOptions config.vehicleTypes selected = system.type  localize=true}}
+              </select>  
+            </div>
+            <div class="grid-4-2" style="padding-top: 3px; padding-left: 5px;">    
+              <select name="system.hardpointType" class="midwid">
+                  {{selectOptions config.frameworks selected = system.hardpointType  localize=true}}
+              </select>   
+            </div>
+            
+          </div>
+        </div>
+        <div class="vitals-right grid-2-3"></div>

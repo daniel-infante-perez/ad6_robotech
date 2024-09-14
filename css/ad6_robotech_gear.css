@@ -1,0 +1,86 @@
+
+.gear-name{
+    background-image: url("../charSheet/gear-name.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 295px 30px;   
+    align-items: baseline; 
+    padding-top: 7px;
+  }
+
+  .gear-init{
+    background-image: url("../charSheet/gear-init.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 45px 30px;    
+    align-items: baseline;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  .gear-mid{
+    background-image: url("../charSheet/gear-mid.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 40px 30px;    
+    align-items: baseline;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  .gear-end{
+    background-image: url("../charSheet/gear-end.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 45px 30px;    
+    align-items: baseline;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  .gear-structure
+  {
+    display:grid;
+    grid-template-columns: 295px 45px 40px 40px 40px 45px ;
+    grid-template-rows: 30px;
+    gap: 3px;
+  }
+
+  
+  .gear-header
+  {
+    display:grid;
+    grid-template-columns: 295px 45px 40px 40px 40px 45px ;
+    grid-template-rows: 10px;
+    gap: 3px;
+  }
+
+  .gear-header-name{
+    background-size: 295px 10px;    
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .gear-header-init{
+    background-size: 45px 10px;    
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .gear-header-mid{
+    background-size: 40px 10px;    
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+
+  }
+
+.gear-item-structure
+{
+    display:grid;
+    grid-template-columns: 90px auto 110px auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    gap: 3px;
+    align-items: baseline;
+}

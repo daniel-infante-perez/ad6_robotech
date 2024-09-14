@@ -1,0 +1,43 @@
+
+.suite-structure
+{
+  display:grid;
+  grid-template-columns: 382px 45px 40px 45px ;
+  grid-template-rows: 30px;
+  gap: 3px;
+}
+.suite-header
+{
+  display:grid;
+  grid-template-columns: 382px 45px 40px 45px ;
+  grid-template-rows: 10px;
+  gap: 3px;
+}
+
+
+.suite-name{
+    background-image: url("../charSheet/suite-name.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 382px 30px;   
+    align-items: baseline; 
+    padding-top: 7px;
+  }
+
+
+.talent-structure
+{
+  display:grid;
+  grid-template-columns: 295px 45px 45px ;
+  grid-template-rows: 30px;
+  gap: 3px;
+}
+.talent-header
+{
+  display:grid;
+  grid-template-columns: 295px 45px 45px ;
+  grid-template-rows: 10px;
+  gap: 3px;
+}
+
+

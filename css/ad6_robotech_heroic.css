@@ -1,0 +1,52 @@
+
+.heroic-structure
+{
+  display:grid;
+  grid-template-columns: 68px 44px 43px 67px;
+  grid-template-rows: 23px 26px 20px;
+}
+
+
+.heroic-left{
+  background-image: url("../charSheet/heroic-left.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 68px 69px; 
+}  
+
+.heroic-header{
+  background-image: url("../charSheet/heroic-header.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 154px 23px; 
+}  
+
+.heroic-full{
+  background-image: url("../charSheet/heroic-full.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 44px 46px; 
+}  
+
+
+.heroic-half-up{
+  background-image: url("../charSheet/heroic-half-up.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 43px 26px; 
+}  
+
+.heroic-half-down{
+  background-image: url("../charSheet/heroic-half-down.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 43px 20px; 
+}  
+
+.heroic-right{
+  background-image: url("../charSheet/heroic-right.png");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 67px 46px; 
+}  
+

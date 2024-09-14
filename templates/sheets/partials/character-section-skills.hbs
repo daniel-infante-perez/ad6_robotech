@@ -1,0 +1,16 @@
+<div class="tab skills" data-group="primary" data-tab="skills">
+              {{#if skills }}
+              <div style="display: grid; gap:3px;">
+                <div class="skill-header">
+                  <div class="gear-header-name">{{ localize "ad6_robotech.sheetText.skill"}}</div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.benefit"}}</div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.cost"}}</div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.value"}}</div>
+                </div>
+                {{#each skills as |skill id|}}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-skills.hbs" skill}}
+                {{/each}}
+              </div>
+              {{/if}}              
+            
+          </div>

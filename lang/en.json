@@ -1,0 +1,156 @@
+{
+
+    "ad6_robotech":
+    {
+        "phase":{
+            "support": "Support"
+            ,"assist": "Assist"
+            ,"obscure": "Obscure"
+            ,"attack": "Attack"
+            ,"defend": "Defend"
+            ,"redirect": "Redirect"
+            ,"inhibit": "Inhibit"
+            ,"interact": "Interact"
+        }
+        ,"rollT":
+        {
+            "advantage": "Advantage"
+            ,"edge": "Edge"
+            ,"normal": "Normal"
+            ,"hindrance": "Hindrance"
+            ,"disadvantage": "Disadvantage"
+        }
+
+        
+        ,"range":
+        {
+            "": ""
+            ,"none":""
+            ,"melee": "Melee [Me]"
+            ,"short": "Short [S]"
+            ,"medium": "Medium [M]"
+            ,"long": "Long [L]"
+            ,"extreme": "Extreme [E]" 
+        }
+        ,"scaleClass":
+        {
+             "light": "Light"
+            ,"mecha": "Mecha"
+            ,"naval": "Naval"
+        }
+        ,"vehicleType":
+        {
+             "main": "Main"
+            ,"lieutenant": "Lieutenant"
+            ,"swarm": "Swarm"
+        }
+        ,"framework":
+        {
+            "basic": "Basic"
+            ,"complex": "Complex"
+        }
+
+        ,"race":
+        {
+             "human": "Human"
+            ,"zentraedi": "Zentraedi"
+            ,"tirolian": "Tirolian"
+            ,"invid": "Invid"
+        }
+        ,"career":
+        {
+             "pilot": "Pilot"
+            ,"officer": "Officer"
+            ,"technician": "Technician"
+            ,"entertainer": "Entertainer"
+            ,"spy": "Spy"
+            ,"marine": "Marine"
+            ,"volunteer": "Volunteer"
+            ,"nomad": "Nomad"
+            ,"triumvirate": "Triumvirate"
+        }
+        ,"sheetText":
+        {
+             "name": "Name"
+            ,"career": "Carreer"
+            ,"race": "Race"
+            ,"rank": "Rank"
+            ,"fame": "Fame"
+            ,"wealth": "Wealth"
+            ,"vitals": "VITALS"
+            ,"stress": "STRESS"
+            ,"burnout": "Burnout"
+            ,"wounds": "WOUNDS"
+            ,"heroicMove": "HEROIC MOVE"
+            ,"level": "Level"
+            ,"buildPoints": "Build Points"
+            ,"speed": "Speed"
+            ,"nature": "NATURE"
+            ,"disposition": "Disposition"
+            ,"demeanor": "Demeanor"
+            ,"drama1": "Drama 1"
+            ,"drama2": "Drama 2"
+            ,"drama3": "Drama 3"
+            ,"proficiencies": "PROFICIENCIES"
+            ,"elements": "ELEMENTS"
+            ,"skills": "SKILLS"
+            ,"talents": "TALENTS"
+            ,"equipment": "EQUIPMENT"
+            ,"bio": "BIO & NOTES"
+            ,"rng": "Rng"
+            ,"ext": "Ext"
+            ,"dmg": "Dmg"
+            ,"pen": "Pen"
+            ,"aoe": "AoE"
+            ,"skill": "Skill"
+            ,"uses": "Uses"
+            ,"left": "Left"
+            ,"cost": "Cost"
+            ,"benefit": "Benefit"
+            ,"value": "Value"
+            ,"description": "Description"
+            ,"custom1": "Custom 1"
+            ,"custom2": "Custom 2"
+            ,"icon": "Icon"
+            ,"reqExp": "Requisition"
+            ,"rngExp": "Range"
+            ,"extExp": "Extended"
+            ,"dmgExp": "Damage"
+            ,"penExp": "Armor Penetration"
+            ,"aoeExp": "Area of Effect"
+            ,"skillExp": "Skill"
+            ,"usesExp": "Number of Uses"
+            ,"leftExp": "Uses Left"
+            ,"hardExp": "Hardware"
+            ,"statExp": "Status"
+            ,"attack": "Attack"
+            ,"defend": "Defend"
+            ,"redirect": "Redirect"
+            ,"assist": "Assist"
+            ,"interact": "Interact"
+            ,"units": "Units"
+            ,"dice": "Dice"
+            ,"totalWounds": "Wounds"
+            ,"cantUseTitle":"Can't use!"
+            ,"cantUseDesc":"There are no uses left. Can't be used."
+            ,"designation": "Designation"
+            ,"scale": "Scale"
+            ,"sheetType": "Type"
+            ,"framework": "Framework"
+            ,"vessel":"VESSEL"
+            ,"framework2":"FRAMEWORK"
+            ,"armor": "Armor"
+            ,"structure": "Structure"
+            ,"resist": "Resist"
+        }
+        ,"message":
+        {
+            "uses": "uses"
+            ,"with": "with"
+            ,"phase": "Phase"
+            ,"successes": "successes"
+            ,"rolltype": "Type"
+        }
+
+    }
+}

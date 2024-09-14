@@ -1,0 +1,37 @@
+      <div class="stress-structure-main">
+        <div class="stress-header stress-location-header" style="padding-left: 95px;"><strong>{{localize "ad6_robotech.sheetText.stress"}}</strong></div>
+        <div class="stress-d1 grid-2-1 fatigueacc" >
+          <select name="system.fatigue1" class="tinwid invselect">
+                {{selectOptions config.fatigues selected = system.fatigue1  localize=false}}
+            </select>
+        </div>
+        <div class="stress-d2 grid-2-2 fatigueacc">
+                <select name="system.fatigue2" class="tinwid invselect">
+                {{selectOptions config.fatigues selected = system.fatigue2  localize=false}}
+            </select>
+        </div>
+        <div class="stress-d3 grid-2-3 fatigueacc">
+            <select name="system.fatigue3" class="tinwid invselect">
+                {{selectOptions config.fatigues selected = system.fatigue3  localize=false}}
+            </select>
+        </div>
+        <div class="stress-d4 grid-2-4 fatigueacc">
+            <select name="system.fatigue4" class="tinwid invselect">
+                {{selectOptions config.fatigues selected = system.fatigue4  localize=false}}
+            </select>
+        </div>
+        <div class="stress-d5 grid-2-5 fatigueacc">
+            <select name="system.fatigue5" class="tinwid invselect">
+                {{selectOptions config.fatigues selected = system.fatigue5  localize=false}}
+            </select>
+        </div>
+        <div class="grid-2-6" style="padding-left: 160px;"><strong>{{localize "ad6_robotech.sheetText.burnout"}}</strong></div>
+      </div>
+
+    <div class="burnout-structure">
+        <div class="burnout-left burnout-location-left"></div>
+        <div class="burnout-right burnout-location-right"></div>
+        <div class="burnout-top grid-1-2"></div>
+        <div class="burnout-bottom grid-3-2"></div>
+        <div class="grid-2-2"><input class="invinput bigText" style="padding-left: 10px; padding-top: 5px;" name="system.burnout" value='{{system.burnout}}'/></div>
+    </div>

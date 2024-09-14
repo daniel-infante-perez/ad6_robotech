@@ -1,0 +1,28 @@
+
+<div class="third-structure">
+  <div class="third-left">  
+    <div style="padding-left: 25px; padding-top: 60px"><input  type="radio" name="system.rollType" value="advantage" {{checked (eq system.rollType  "advantage")}} /></div>
+    <div style="padding-left: 25px; padding-top: 5px "><input type="radio" name="system.rollType" value="edge" {{checked (eq system.rollType  "edge")}} /></div>
+    <div style="padding-left: 25px; padding-top: 7px "><input type="radio" name="system.rollType" value="normal" {{checked (eq system.rollType  "normal")}} /></div>
+    <div style="padding-left: 25px; padding-top: 6px "><input type="radio" name="system.rollType" value="hindrance" {{checked (eq system.rollType  "hindrance")}} /></div>
+    <div style="padding-left: 25px; padding-top: 6px "><input type="radio" name="system.rollType" value="disadvantage" {{checked (eq system.rollType  "disadvantage")}} /></div>
+
+    <!--<div>{{ system.rollType }}</div>-->
+  </div>
+  <div class="third-right">
+    <div style="display:grid; grid-template-columns: 180px 180px 180px; grid-template-rows: 15px 15px 15px; gap:3px; padding-left: 60px; padding-top: 126px; ">
+        <div class="grid-1-1"><input  type="radio" name="system.actionPhase" value="assist" {{checked (eq system.actionPhase  "assist")}} /></div>
+        <div class="grid-2-1"><input type="radio" name="system.actionPhase" value="obscure" {{checked (eq system.actionPhase  "obscure")}} /></div>
+        <div class="grid-3-1"><input type="radio" name="system.actionPhase" value="observe" {{checked (eq system.actionPhase  "observe")}} /></div>
+
+
+        <div class="grid-1-2" ><input  type="radio" name="system.actionPhase" value="attack" {{checked (eq system.actionPhase  "attack")}} /></div>
+        <div class="grid-2-2"><input type="radio" name="system.actionPhase" value="defend" {{checked (eq system.actionPhase  "defend")}} /></div>
+        <div class="grid-3-2"><input type="radio" name="system.actionPhase" value="redirect" {{checked (eq system.actionPhase  "redirect")}} /></div>
+
+
+        <div class="grid-1-3"><input  type="radio" name="system.actionPhase" value="inhibit" {{checked (eq system.actionPhase  "inhibit")}} /></div>
+        <div class="grid-2-3"><input type="radio" name="system.actionPhase" value="interact" {{checked (eq system.actionPhase  "interact")}} /></div>
+    </div>
+  </div>
+</div>

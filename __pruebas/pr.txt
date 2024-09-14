@@ -1,0 +1,254 @@
+try{
+  const dados = [];
+  let exitos = 0;
+  let cadena="";
+  let tirada =  -1;
+  for(let i=0; i < scope.cantidad; i++)
+  {
+     tirada = Math.floor((Math.random() * 6) + 1);
+     dados.push(tirada);
+     switch(scope.dificultad)
+     {
+        case "Ventaja (+2)":
+           switch(tirada)
+           {
+              case 1:
+              case 2:
+              case 3:
+                 break;
+              case 4: 
+                 exitos ++;
+                 break;
+              case 5:
+              case 6:
+                 exitos += 2;
+                 break;
+           }
+     
+           break;
+        case "Margen (+1)":
+           switch(tirada)
+           {
+              case 1:
+              case 2:
+              case 3:
+                 break;
+              case 4: 
+              case 5:
+                 exitos ++;
+                 break;
+              case 6:
+                 exitos += 2;
+                 break;
+           }
+           break;
+        case "Normal (0)":
+           switch(tirada)
+           {
+              case 1:
+              case 2:
+              case 3:
+              case 4:
+                 break;
+              case 5:
+                 exitos ++;
+                 break;
+              case 6:
+                 exitos += 2;
+                 break;
+           }
+           break;
+        case "Complicación (-1)":
+           switch(tirada)
+           {
+              case 1:
+              case 2:
+              case 3:
+              case 4:
+              case 5:
+                 break;
+              case 6:
+                 exitos += 2;
+                 break;
+           }
+           break;
+        case "Desventaja (-2)":
+           switch(tirada)
+           {
+              case 1:
+              case 2:
+              case 3:
+              case 4:
+              case 5:
+                 break;
+              case 6:
+                 exitos ++;
+                 break;
+           }
+           break;
+           break;
+     }
+  }
+  let res = "";
+  res = "<b>" + exitos + "</b> éxitos. (" + dados.toString();
+  res+=").-";
+  return res;
+}
+catch(err)
+{
+  return "Se produjo un error";
+}
+
+
+
+
+    	<select name="system.range">
+        {{#select system.range}}
+        {{#each config.ranges as |name type|}}
+        <option value="{{type}}">{{name}}</option>
+        {{/each}}
+        {{/select}}
+        </select>
+
+<input name="system.range" value="{{system.range}}" data-dtype="String"/>
+
+<select name="system.range">
+        {{selectOptions config.ranges localize=true}}
+    </select>
+
+
+
+    
+<div class="second-structure">
+  <div class="grid-1-1" style="display:block">
+  <div class="hex-structure">
+  </div>
+  <div><strong>{{ localize "ad6_robotech.sheetText.level"}}</strong></div>
+  </div>
+</div>
+
+          <div class="grid-3-2">    
+            <input type="text" name="system.race" value="{{system.race}}" list="races">            
+            <!--<select name="system.race"  class="midwid">-->
+            <datalist id="races">
+                {{selectOptions config.races selected = system.race  localize=true}}
+            </datalist>
+            <!--</select>   -->
+          </div>
+
+
+
+
+
+           style="max-height: 300px; overflow-y:scroll; overflow-x: hidden;"
+
+
+       <!-- <div class="vitals-header grid-header" style="padding-left: 110px;"><strong>{{localize "ad6_robotech.sheetText.vitals"}}</strong></div>
+        <div class="vitals-left grid-2-1"></div>
+        <div class="vitals-panel grid-2-2" style="padding-left: 5px; padding-bottom: 10px;">
+          <div class="grid-1-1" >{{localize "ad6_robotech.sheetText.name"}}</div>
+          <div class="grid-1-2"><h4 class='charname'><input
+                  name='name'
+                  type='text'
+                  value='{{actor.name}}'
+                  placeholder='Name'
+                /></h1></div>
+          <div class="grid-2-1">{{localize "ad6_robotech.sheetText.career"}}</div>
+          <div class="grid-3-1">{{localize "ad6_robotech.sheetText.race"}}</div>
+          <div class="grid-4-1">{{localize "ad6_robotech.sheetText.rank"}}</div>
+          <div class="grid-5-1">{{localize "ad6_robotech.sheetText.fame"}}</div>
+          <div class="grid-6-1">{{localize "ad6_robotech.sheetText.wealth"}}</div>
+          <div class="grid-2-2">    
+            <select name="system.career"  class="midwid">
+                {{selectOptions config.careers selected = system.career  localize=true}}
+            </select>  
+          </div> 
+          <div class="grid-3-2">    
+            <select name="system.race"  class="midwid">
+                {{selectOptions config.races selected = system.race  localize=true}}
+            </select>  
+          </div>
+          <div class="grid-4-2">    
+            <select name="system.rank.rank" class="smawid">
+                {{selectOptions config.ranks selected = system.rank.rank  localize=false}}
+            </select>   &nbsp;&nbsp;<input class="midwid transinput fnt" name="system.rank.description" value="{{system.rank.description}}" data-dtype="String"/>
+          </div>
+          <div class="grid-5-2">    
+            <select name="system.fame.rank" class="smawid">
+                {{selectOptions config.fames selected = system.fame.rank  localize=false}}
+            </select>   &nbsp;&nbsp;<input class="midwid transinput" name="system.fame.description" value="{{system.fame.description}}" data-dtype="String"/>
+          </div>
+          <div class="grid-6-2">    
+            <select name="system.wealth.rank" class="smawid">
+                {{selectOptions config.wealths selected = system.wealth.rank  localize=false}}
+            </select>   &nbsp;&nbsp;<input class="midwid transinput" name="system.wealth.description" value="{{system.wealth.description}}" data-dtype="String"/>
+          </div>
+        </div>
+        <div class="vitals-right grid-2-3"></div>-->
+
+
+
+        esto estaba en la clase item
+
+           /*async check()
+    {
+        
+        let dados = this.system.skill;
+        console.log(this.parent.system.actionPhase);
+        console.log(this.parent.system.rollType);
+        console.log(this.parent.name);
+
+
+        let rollFormula = "{";
+        for(let i=0; i < dados; i++)
+        {
+            if(i!=0){rollFormula+=",";}
+            rollFormula+="1d6";
+        }
+        rollFormula +="}";
+        let roll = new Roll(rollFormula);
+        await roll.evaluate();
+        console.log(roll);
+        console.log(roll.dice);
+        let successes =0;
+        for(let i=0; i < dados; i++)
+            {
+                if(roll.dice[i].total == 6)
+                {
+                    if(this.parent.system.rollType=="disadvantage"){ successes++;}else{successes+=2;}
+
+                }
+                if(roll.dice[i].total == 5)
+                    {
+                        if((this.parent.system.rollType=="edge")||(this.parent.system.rollType=="normal")){ successes++;}
+                        if(this.parent.system.rollType=="advantage"){ successes+=2;}                        
+                }
+                if(roll.dice[i].total==4)
+                {
+                    if((this.parent.system.rollType=="edge")||(this.parent.system.rollType=="advantage")){ successes++;}
+                }                
+                console.log(roll.dice[i].total);
+            }
+            console.log(successes);
+            let cardData ={
+                 name: this.name
+                ,system: this.system
+                ,owner: this.parent.name
+                ,rollType: game.i18n.localize("ad6_robotech.rollT." + this.parent.system.rollType)
+                ,actionPhase: game.i18n.localize("ad6_robotech.phase." +this.parent.system.actionPhase)
+                ,dice: roll.dice
+                ,successes: successes
+
+            };
+            console.log(cardData);
+            ChatMessage.create({
+                speaker: ChatMessage.getSpeaker(),
+                content: await renderTemplate(this.chatTemplate[this.type],cardData)
+                });
+
+            if(this.type=="equipmentsuite")
+            {
+                this.usar();
+            }
+
+    }*/
