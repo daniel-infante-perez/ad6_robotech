@@ -1,7 +1,8 @@
 <div class="hex-structure">
       <div class="grid-1-sp3-1 hex-left"></div>
-      <div class="grid-1-sp3-3 hex-right item" data-phase="{{phase}}" data-value="{{value}}"><a class="hex-check" style="visibility:{{ rollable }};"><i class="fas fa-dice faiconcolor"></i></a></div>
-      <div class="grid-2-2" ><input class="invinput bigText smainput" style="padding-top: 5px;" name="{{ field }}" value='{{value}}'/></div>
+      <div class="grid-1-sp3-3 hex-right item" data-phase="{{phase}}" data-value="{{value}}"><a class="hex-check" style="{{ rollable }};"><i class="fas fa-dice faiconcolor"></i></a></div>
+      <div class="grid-2-2" >
+        <input class="invinput bigText smainput" {{rdonly}} style="padding-top: 5px;" name="{{ field }}" value='{{value}}'/></div>
       <div class="grid-1-2 hex-top"></div>
       <div class="grid-3-2 hex-down"></div>
     </div>

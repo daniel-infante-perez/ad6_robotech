@@ -1,7 +1,6 @@
 
 export async function  coreCheck (dados,actionPhase,rollType,name,owner,message) {
     
-
     let rollFormula = "{";
     for(let i=0; i < dados; i++)
     {
@@ -11,8 +10,6 @@ export async function  coreCheck (dados,actionPhase,rollType,name,owner,message)
     rollFormula +="}";
     let roll = new Roll(rollFormula);
     await roll.evaluate();
-   // console.log(roll);
-   // console.log(roll.dice);
     let successes =0;
     for(let i=0; i < dados; i++)
         {
@@ -30,9 +27,8 @@ export async function  coreCheck (dados,actionPhase,rollType,name,owner,message)
             {
                 if((rollType=="edge")||(rollType=="advantage")){ successes++;}
             }                
-           // console.log(roll.dice[i].total);
         }
-       // console.log(successes);
+
         let cardData ={
              name: name
             ,owner: owner
@@ -43,12 +39,11 @@ export async function  coreCheck (dados,actionPhase,rollType,name,owner,message)
             ,successes: successes
 
         };
-        
         ChatMessage.create({
             speaker: ChatMessage.getSpeaker(),
             content: await renderTemplate("systems/ad6_robotech/templates/cards/roll-card.hbs",cardData)
             });
-
+  
         /*if(this.type=="equipmentsuite")
         {
             this.usar();

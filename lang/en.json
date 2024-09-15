@@ -159,7 +159,10 @@
             ,"nom": "Nom"
             ,"hin": "Hin"
             ,"dis": "Dis"
-
+            ,"redstr": "Struc."
+            ,"talent": "Talent"
+            ,"gear": "Gear"
+            ,"equipmentsuite": "Suite"
         }
         ,"message":
         {

@@ -6,14 +6,14 @@
   grid-template-rows: 186px;
 }
 .third-left{
-  background-image: url("../charSheet/Originals/Successes.png");
+  background-image: url("../charSheet/Successes.png");
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 316px 186px;    
 }
 
 .third-left-small{
-    background-image: url("../charSheet/Originals/Successes.png");
+    background-image: url("../charSheet/Successes.png");
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 284px 167px;    

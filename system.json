@@ -11,10 +11,11 @@
         "flags": {}
       }
     ],
+    "url": "https://github.com/daniel-infante-perez/ad6_robotech",
     "version": "1.0.0",
     "compatibility": {
-      "minimum": 11,
-      "verified": "12"
+      "minimum": 12,
+      "verified": "12.331"
     },
     "esmodules": ["module/ad6_robotech.mjs"],
     "styles": ["css/ad6_robotech.css"],
@@ -32,5 +33,6 @@
     ],
     "packs": [],
     "packFolders": []
+    ,"manifest": "https://github.com/daniel-infante-perez/ad6_robotech/system.json"
   }
   

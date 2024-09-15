@@ -41,12 +41,16 @@ export default class ad6_robotechItem extends Item{
     consumable()
     {
         let res = true;
-        console.log(this.system.max);
-        console.log(this.system.value);
+       /* console.log("1:" + this.system.max +"<");
+        console.log("2:" + (this.system.max===undefined));
+        console.log("3:" + (this.system.max==" "));
+        console.log("4:" + (this.system.max==null));
+        console.log("5:" + (this.system.max===null));*/
+
         if((this.type=="equipmentsuite")||(this.type=="talent"))
         {
             
-            if (this.system.max===undefined)
+            if ((this.system.max===undefined))
             {
                 res =  false;
             }

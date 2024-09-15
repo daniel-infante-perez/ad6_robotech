@@ -45,82 +45,120 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
 
         data.type = this.actor.type;
 
+        if(this.actor.type=="vehicle")
+        {
+            if(this.actor.system.type !="lieutenant")
+            {
+                data.visibleLtDiv = "visibility:hidden;";
+                
+            }
+            if(this.actor.system.type !="swarm")
+                {
+                    data.visibleSwDiv = "visibility:hidden;";
+                    
+                }
+            if(this.actor.system.type =="lieutenant")
+                {
+                    data.visibleLt3 = "visibility:hidden;";
+                    
+                }
+    
+             
+        }
+
         data.hex0 = {  field: "system.attack"
                       ,value: data.system.attack
                       ,lbl: "ad6_robotech.phase.attack"
                       ,phase: "attack"
-                      ,rollable: "visible"
+                      ,rollable: ""
         };
         data.hex1 = {  field: "system.defend"
             ,value: data.system.defend
             ,lbl: "ad6_robotech.phase.defend"
             ,phase: "defend"
-            ,rollable: "visible"
+            ,rollable: ""
         };
         data.hex2 = {  field: "system.redirect"
             ,value: data.system.redirect
             ,lbl: "ad6_robotech.phase.redirect"
             ,phase: "redirect"
-            ,rollable: "visible"
+            ,rollable: ""
         };
         data.hex3 = {  field: "system.assist"
             ,value: data.system.assist
             ,lbl: "ad6_robotech.phase.assist"
             ,phase: "assist"
-            ,rollable: "visible"
+            ,rollable: ""
         };
         data.hex4 = {  field: "system.interact"
             ,value: data.system.interact
             ,lbl: "ad6_robotech.phase.interact"
             ,phase: "interact"
-            ,rollable: "visible"
+            ,rollable: ""
         };
         data.hex5 = {  field: "system.units"
             ,value: data.system.units
             ,lbl: "ad6_robotech.sheetText.units"
             ,phase: ""
-            ,rollable: "visible"
+            ,rollable: ""
         };
 
         data.hex6 = {  field: "system.level"
             ,value: data.system.level
             ,lbl: "ad6_robotech.sheetText.level"
             ,phase: ""
-            ,rollable: "hidden"
+            ,rollable: "visibility: hidden;"
         };
         data.hex7 = {  field: "system.buildPoints"
             ,value: data.system.buildPoints
             ,lbl: "ad6_robotech.sheetText.buildPoints"
             ,phase: ""
-            ,rollable: "hidden"
+            ,rollable: "visibility: hidden;"
         };
         data.hex8 = {  field: "system.speed"
             ,value: data.system.speed
             ,lbl: "ad6_robotech.sheetText.speed"
             ,phase: ""
-            ,rollable: "hidden"
+            ,rollable: "visibility: hidden;"
         };                
         
         data.hex9 = {  field: "system.units"
             ,value: data.system.units
             ,lbl: "ad6_robotech.sheetText.units"
             ,phase: ""
-            ,rollable: "hidden"
+            ,rollable: "visibility: hidden;"
         };
 
         data.hex10 = {  field: "system.dice"
             ,value: data.system.dice
             ,lbl: "ad6_robotech.sheetText.dice"
             ,phase: ""
-            ,rollable: "visible"
+            ,rollable: ""
         };
 
         data.hex11 = {  field: "system.totalWounds"
             ,value: data.system.totalWounds
             ,lbl: "ad6_robotech.sheetText.totalWounds"
             ,phase: ""
-            ,rollable: "hidden"
+            ,rollable: "visibility: hidden;"
         };
+
+        data.hex11 = {  field: "system.totalWounds"
+            ,value: data.system.totalWounds
+            ,lbl: "ad6_robotech.sheetText.totalWounds"
+            ,phase: ""
+            ,rollable: "visibility: hidden;"
+        };
+        
+        if(this.actor.type=="vehicle"){
+        data.hex12 = {  
+             value: Math.ceil(data.system.structure.max/3)
+            ,lbl: "ad6_robotech.sheetText.redstr"
+            ,phase: ""
+            ,rollable:  "visibility: hidden;"
+            ,rdonly: "readonly"
+        };
+    }
         
         //data.flags = actorData.flags;
         data.flags = this.actor.flags;
@@ -190,10 +228,23 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         let element = event.currentTarget;
         let phase = "";
         let value = "";
+        
         switch(this.actor.type)
         {
             case "lieutenant":
                 phase = element.closest(".item").dataset.phase;
+                value = element.closest(".item").dataset.value;
+                break;
+            case "vehicle":
+                if(this.actor.system.type =="lieutenant")
+                {
+                    phase = element.closest(".item").dataset.phase;
+                }
+                else
+                {
+                    phase = this.actor.system.actionPhase;
+                }
+                
                 value = element.closest(".item").dataset.value;
                 break;
             case "swarm":
@@ -205,6 +256,11 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         }
         let rollType = this.actor.system.rollType;
         let name = this.actor.name;
+        console.log(this.actor.type);
+        console.log(name);
+        console.log(rollType);
+        
+
         coreCheck(value, phase,rollType,phase,name,"");
     }
 
@@ -220,7 +276,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
     {        
         let item = this.getItemOnItemId(event);
         
-        if(item.consumable()){
+        if(item.canRoll()){
             item.consume();
         }
         else{ this.cantUseChatMessage(); }

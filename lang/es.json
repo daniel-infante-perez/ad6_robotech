@@ -157,6 +157,12 @@
             ,"nom": "Nor"
             ,"hin": "Obs"
             ,"dis": "Des"
+            ,"redstr": "Estruc."
+            ,"talent": "Talento"
+            ,"gear": "Equipo"
+            ,"equipmentsuite": "Suite"
+
+
         }
         ,"message":
         {
