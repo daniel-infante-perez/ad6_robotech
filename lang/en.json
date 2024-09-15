@@ -163,6 +163,12 @@
             ,"talent": "Talent"
             ,"gear": "Gear"
             ,"equipmentsuite": "Suite"
+            ,"gearTooltip":"Create new gear"
+            ,"suiteTooltip":"Create new equipment suite"
+            ,"skillTooltip":"Create new skill"
+            ,"talentTooltip":"Create new talent"
+            ,"featureTooltip":"Create new feature"
+            ,"hardwareTooltip":"Create new hardware"
         }
         ,"message":
         {

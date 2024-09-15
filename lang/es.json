@@ -161,6 +161,12 @@
             ,"talent": "Talento"
             ,"gear": "Equipo"
             ,"equipmentsuite": "Suite"
+            ,"gearTooltip":"Crear un nuevo equipo"
+            ,"suiteTooltip":"Crear una nueva suite de equipo"
+            ,"skillTooltip":"Crear una nueva habilidad"
+            ,"talentTooltip":"Crear un nuevo talento"
+            ,"featureTooltip":"Crear una nueva característica"
+            ,"hardwareTooltip":"Crear un nuevo hardware"
 
 
         }
