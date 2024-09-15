@@ -256,9 +256,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         }
         let rollType = this.actor.system.rollType;
         let name = this.actor.name;
-        console.log(this.actor.type);
-        console.log(name);
-        console.log(rollType);
+
         
 
         coreCheck(value, phase,rollType,phase,name,"");
@@ -286,7 +284,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
 
     _onItemDescription(event)
     {
-        //console.log("entrop");
+        
         let item = this.getItemOnItemId(event);
         item.describe(true);
     }

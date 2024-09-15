@@ -11,7 +11,7 @@ export default class ad6_robotechItemSheet extends ItemSheet{
 
     get template(){
         const path = 'systems/ad6_robotech/templates/sheets/item';
-        //console.log(path + '/item-' + this.item.type +'-sheet.hbs');
+        
         return path + '/item-' + this.item.type +'-sheet.hbs';
     }
     getData()

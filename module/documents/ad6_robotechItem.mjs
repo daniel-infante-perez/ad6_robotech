@@ -9,7 +9,7 @@ export default class ad6_robotechItem extends Item{
     prepareData() {
         super.prepareData();
         let cad = "systems/ad6_robotech/assets/"+this.type+".svg";
-        //console.log(cad);
+        
         this.img = cad;
     }
 
@@ -41,12 +41,7 @@ export default class ad6_robotechItem extends Item{
     consumable()
     {
         let res = true;
-       /* console.log("1:" + this.system.max +"<");
-        console.log("2:" + (this.system.max===undefined));
-        console.log("3:" + (this.system.max==" "));
-        console.log("4:" + (this.system.max==null));
-        console.log("5:" + (this.system.max===null));*/
-
+       
         if((this.type=="equipmentsuite")||(this.type=="talent"))
         {
             
