@@ -27,9 +27,7 @@ async function preloadHandlebarsTemplates() {
       ,'systems/ad6_robotech/templates/sheets/partials/character-section-items.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-section-skills.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs'
-      ,'systems/ad6_robotech/templates/cards/equipmentsuite-card.hbs'
-      ,'systems/ad6_robotech/templates/cards/gear-card.hbs'
-      ,'systems/ad6_robotech/templates/cards/talent-card.hbs'
+      
       ,'systems/ad6_robotech/templates/cards/description-card.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/item-nav.hbs'
@@ -38,6 +36,10 @@ async function preloadHandlebarsTemplates() {
       ,'systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-vitals-mecha.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-vehicle-framework.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-hardware.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-feature.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/vehicle-section-items.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/vehicle-equipmentsuite.hbs'
     ]);
   };
   

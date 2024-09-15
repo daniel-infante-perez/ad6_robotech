@@ -40,6 +40,8 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         data.suites = this.actor.items.filter(function(item){return item.type=="equipmentsuite"});
         data.talents = this.actor.items.filter(function(item){return item.type=="talent"});
         data.skills = this.actor.items.filter(function(item){return item.type=="skill"});
+        data.features = this.actor.items.filter(function(item){return item.type=="feature"});
+        data.hardwares = this.actor.items.filter(function(item){return item.type=="hardware"});
 
         data.type = this.actor.type;
 
@@ -140,7 +142,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
             html.find(".core-check").click(this._onCoreCheck.bind(this));
             html.find(".hex-check").click(this._onHexCheck.bind(this));
 
-    
+            html.find(".item-create").click(this._onItemCreate.bind(this));
     }
     
     getItemOnItemId(event)
@@ -150,6 +152,22 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         let itemId = element.closest(".item").dataset.itemId;
         let item = this.actor.items.get(itemId);
         return item;
+    }
+
+    _onItemCreate(event)
+    {
+
+        let element = event.currentTarget;
+
+        let type = element.closest(".item").dataset.type;
+  
+        
+        let feature = {
+             name: game.i18n.localize("ad6_robotech.sheetText." + type)
+            ,type: type
+        };
+
+        this.actor.createEmbeddedDocuments("Item",[feature]);
     }
     _onCoreCheck(event)
     {        

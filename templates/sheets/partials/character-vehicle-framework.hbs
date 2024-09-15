@@ -1,32 +1,31 @@
         <div class="vitals-header grid-header" style="padding-left: 110px;"><strong>{{localize "ad6_robotech.sheetText.framework2"}}</strong></div>
-        <div class="vitals-left grid-2-1"></div>
+        <div class="vitals-trim-left grid-2-1"></div>
         <div class="grid-2-2">
           <div class="vitals-mecha-interior">
-                <div class="grid-1-1 nature-disposition-lbl" ></div>
-                <div class="grid-2-1 nature-demeanor-30"  ></div>
-                <div class="grid-3-1 nature-disposition-lbl" ></div>
-                <div class="grid-4-1 nature-demeanor-30"  ></div>
+                <div class="grid-1-1"></div>
+                <div class="grid-1-2" style="text-align: center;font-size: 10px;font-weight: bold;">{{ localize "ad6_robotech.sheetText.total"}}</div>
+                <div class="grid-1-3" style="text-align: center;font-size: 10px;font-weight: bold;">{{ localize "ad6_robotech.sheetText.left"}}</div>
+                <div class="grid-2-1 nature-disposition-lbl" style="padding-top: 5px; padding-left: 15px;" >{{ localize "ad6_robotech.sheetText.armor"}}</div>
+                <div class="grid-3-1 nature-demeanor-30"  style="padding-top: 5px; padding-left: 15px;" >{{ localize "ad6_robotech.sheetText.structure"}}</div>
+                <div class="grid-4-1 nature-disposition-lbl"  style="padding-top: 5px; padding-left: 15px;" >{{ localize "ad6_robotech.sheetText.resist"}}</div>
 
-                <div class="grid-1-2">
+                <div class="grid-2-2">
                     <div style="display: grid; grid-template-columns: 40px 45px; grid-template-rows: 30px;">
-                        <div class="gear-trk" ></div>
-                        <div class="gear-end" ></div>
+                        <div class="gear-trk" style="padding-left: 12px;"><input class="invinput smawid" name="system.armor.max" value="{{system.armor.max}}" data-dtype="Number"></div>
+                        <div class="gear-end" style="padding-left: 15px;"><input class="invinput smawid" name="system.armor.value" value="{{system.armor.value}}" data-dtype="Number"></div>
                     </div>
                 </div>
-                <div class="grid-2-2"> 
+                <div class="grid-3-2"> 
                     <div style="display: grid; grid-template-columns: 40px 45px; grid-template-rows: 30px;">
-                        <div class="gear-trk" ></div>
-                        <div class="gear-end" ></div>
+                        <div class="gear-trk" style="padding-left: 12px;"><input class="invinput smawid" name="system.structure.max" value="{{system.structure.max}}" data-dtype="Number"></div>
+                        <div class="gear-end" style="padding-left: 15px;"><input class="invinput smawid" name="system.structure.value" value="{{system.structure.value}}" data-dtype="Number"></div>
                     </div>
                 </div> 
-                <div class="grid-3-2">    
+                <div class="grid-4-2">    
                   <div style="display: grid; grid-template-columns: 45px; grid-template-rows: 30px;">
-                    <div class="gear-end-trk" ></div>
+                    <div class="gear-end-trk"  style="padding-left: 12px;"><input class="invinput smawid" name="system.resist" value="{{system.resist}}" data-dtype="Number"></div>
                   </div>
                 </div>
-                <div class="grid-4-2" >    
-
-                </div>            
           </div>
         </div>
         <div class="vitals-right grid-2-3"></div>

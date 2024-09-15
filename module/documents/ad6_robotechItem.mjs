@@ -5,8 +5,14 @@ export default class ad6_robotechItem extends Item{
         ,"equipmentsuite": "systems/ad6_robotech/templates/cards/equipmentsuite-card.hbs"
         ,"skill":"systems/ad6_robotech/templates/cards/skill-card.hbs"
     }
-
     
+    prepareData() {
+        super.prepareData();
+        let cad = "systems/ad6_robotech/assets/"+this.type+".svg";
+        //console.log(cad);
+        this.img = cad;
+    }
+
     message()
     {
         let res = "";

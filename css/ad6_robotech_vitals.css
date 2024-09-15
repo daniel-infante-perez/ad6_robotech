@@ -88,8 +88,8 @@
 
       .vitals-mecha-interior{
         display:grid;
-        grid-template-columns: 93px 192px;
-        grid-template-rows: 30px 30px 30px 30px;
+        grid-template-columns: 93px 40px 45px;
+        grid-template-rows: 10px 30px 30px 30px;
         gap: 3px;
 
         }
@@ -98,4 +98,10 @@
     display: grid;
     grid-template-columns: 11px 290px 19px;
     grid-template-rows: 38px 203px;
+  }
+  .vitals-trim-left{
+    background-image: url("../charSheet/vitals-trim-left.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 11px 129px;
   }

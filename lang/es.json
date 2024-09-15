@@ -140,7 +140,23 @@
             ,"armor": "Armadura"
             ,"structure": "Estructura"
             ,"resist": "Resiste"
-
+            ,"total": "Total"
+            ,"features": "CARACTERÍSTICAS"
+            ,"hardware2": "HARDWARE"
+            ,"systems": "SISTEMAS"
+            ,"status": "Estado"
+            ,"suite": "Suite"
+            ,"feature": "Característica"
+            ,"hardware": "Hardware"
+            ,"sensors": "Sensores"
+            ,"targeting": "Puntería"
+            ,"thrusters": "Impulsores"
+            ,"engines": "Motores"
+            ,"adv": "Ven"
+            ,"edg": "Apo"
+            ,"nom": "Nor"
+            ,"hin": "Obs"
+            ,"dis": "Des"
         }
         ,"message":
         {

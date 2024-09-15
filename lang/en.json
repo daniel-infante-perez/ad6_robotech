@@ -142,6 +142,24 @@
             ,"armor": "Armor"
             ,"structure": "Structure"
             ,"resist": "Resist"
+            ,"total": "Total"
+            ,"features": "FEATURES"
+            ,"hardware2": "HARDWARE"
+            ,"systems": "SYSTEMS"
+            ,"status": "Status"
+            ,"suite": "Suite"
+            ,"feature": "Feature"
+            ,"hardware": "Hardware"
+            ,"sensors": "Sensors"
+            ,"targeting": "Targeting"
+            ,"thrusters": "Thrusters"
+            ,"engines": "Engines"
+            ,"adv": "Adv"
+            ,"edg": "Edg"
+            ,"nom": "Nom"
+            ,"hin": "Hin"
+            ,"dis": "Dis"
+
         }
         ,"message":
         {

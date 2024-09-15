@@ -3,7 +3,7 @@
     <header class='sheet-header'>
     </header>
 
-    <div class="main-structure" style="padding-bottom:10px;">
+    <div class="main-structure" style="padding-bottom:10px; height:190px;">
       <div class="vitals-structure grid-1-1">
           {{> "systems/ad6_robotech/templates/sheets/partials/character-vitals-mecha.hbs"}}
       </div>  
@@ -14,9 +14,154 @@
         <img class='profile-img' width="150" src='{{actor.img}}' data-edit='img' title='{{actor.name}}'/>
       </div>
     </div>
+
+    <div class="mecha-second-structure">
+        <div class="grid-1-1">
+            <div style="display:grid; grid-template-columns: 235px; grid-template-rows: 27px 160px;">
+              <div class="features-header grid-1-1 item" style="display: flex;" data-type="feature">
+                <div>
+                <strong>{{ localize "ad6_robotech.sheetText.features"}}&nbsp;&nbsp;</strong>
+                </div>
+                <div><a class="item-create"><i class="fas fa-plus faiconcolor"></i></a></div>
+              </div>
+              <div class="grid-2-1" style="max-height: 160px; overflow-y:scroll; overflow-x: hidden;">
+                {{#if features }}
+                  <div style="display: grid; gap:3px;">
+                    {{#each features as |feature id|}}
+                    {{> "systems/ad6_robotech/templates/sheets/partials/character-feature.hbs" feature}}
+                    {{/each}}
+                  </div>        
+                {{/if}}
+              </div>
+            </div>
+        </div>
+        <div class="grid-1-2">
+            <div style="display:grid; grid-template-columns: 265px; grid-template-rows: 27px 160px;">
+              <div class="features-header grid-1-1 item" style="display: flex;" data-type="hardware">
+                <div>
+                <strong>{{ localize "ad6_robotech.sheetText.hardware2"}}&nbsp;&nbsp;</strong>
+                </div>
+                <div><a class="item-create"><i class="fas fa-plus faiconcolor"></i></a></div>
+              </div>
+              <div class="grid-2-1" style="max-height: 160px; overflow-y:scroll; overflow-x: hidden;">
+                {{#if hardwares }}
+                  <div style="display: grid; gap:3px;">
+                    {{#each hardwares as |hardware id|}}
+                    {{> "systems/ad6_robotech/templates/sheets/partials/character-hardware.hbs" hardware}}
+                    {{/each}}
+                  </div>        
+                {{/if}}
+              </div>
+            </div>
+        </div>
+        <div class="grid-1-3">
+            <div style="display:grid; grid-template-columns: 306px; grid-template-rows: 27px auto;">
+              <div class="features-header grid-1-1 item" style="display: flex;" data-type="hardware">
+                <strong>{{ localize "ad6_robotech.sheetText.systems"}}</strong>
+              </div>
+              <div class="grid-2-1" style="display:grid; grid-template-columns: 93px 210px; grid-template-rows: 10px 30px 30px 30px 10px 30px; gap:3px;">
+                <div class="grid-1-2" style="font-size: 10px; font-weight:bold;">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {{ localize "ad6_robotech.sheetText.adv"}}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {{ localize "ad6_robotech.sheetText.edg"}}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {{ localize "ad6_robotech.sheetText.nom"}}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                  
+                  {{ localize "ad6_robotech.sheetText.hin"}}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  {{ localize "ad6_robotech.sheetText.dis"}}
+                   </div>
+
+                <div class="grid-2-1 system-top" style="padding-left: 15px; padding-top: 6px;">
+                  {{ localize "ad6_robotech.sheetText.sensors"}}</div>
+                <div class="grid-3-1 system-mid" style="padding-left: 15px; padding-top: 6px;">
+                  {{ localize "ad6_robotech.sheetText.targeting"}}</div>
+                <div class="grid-4-1 system-top" style="padding-left: 15px; padding-top: 6px;">
+                  {{ localize "ad6_robotech.sheetText.thrusters"}}</div>
+                <div class="grid-5-2" style="font-size: 10px; font-weight:bold;">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  100%
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  75%
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  50%
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  25%
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  0%</div>
+                <div class="grid-6-1 system-mid" style="padding-left: 15px; padding-top: 6px;">
+                  {{ localize "ad6_robotech.sheetText.engines"}}</div>
+                <div class="grid-2-2 system-tray">
+                  <div style="padding-top: 6px; display:grid; grid-template-columns: 36px 36px 36px 36px 37px grid-template-rows: 30px;">
+                      <div class="grid-1-1" style="padding-left:12px;"><input  type="radio" name="system.sensors" value="adv" {{checked (eq system.sensors  "adv")}} /></div>
+                      <div class="grid-1-2" style="padding-left:4px;"><input class="transp"  type="radio" name="system.sensors" value="edg" {{checked (eq system.sensors  "edg")}} /></div>
+                      <div class="grid-1-3"  style="padding-left:4px;"><input class="transp" type="radio" name="system.sensors" value="nom" {{checked (eq system.sensors  "nom")}} /></div>
+                      <div class="grid-1-4"><input class="transp" type="radio" name="system.sensors" value="hin" {{checked (eq system.sensors  "hin")}} /></div>
+                      <div class="grid-1-5" style="padding-left:5px;"><input class="transp" type="radio" name="system.sensors" value="dis" {{checked (eq system.sensors  "dis")}} /></div>
+                  </div>
+                </div>
+                <div class="grid-3-2 system-tray">
+                  <div style="padding-top: 6px; display:grid; grid-template-columns: 36px 36px 36px 36px 37px grid-template-rows: 30px;">
+                      <div class="grid-1-1" style="padding-left:12px;"><input  type="radio" name="system.targeting" value="adv" {{checked (eq system.targeting  "adv")}} /></div>
+                      <div class="grid-1-2" style="padding-left:4px;"><input class="transp"  type="radio" name="system.targeting" value="edg" {{checked (eq system.targeting  "edg")}} /></div>
+                      <div class="grid-1-3"  style="padding-left:4px;"><input class="transp" type="radio" name="system.targeting" value="nom" {{checked (eq system.targeting  "nom")}} /></div>
+                      <div class="grid-1-4"><input class="transp" type="radio" name="system.targeting" value="hin" {{checked (eq system.targeting  "hin")}} /></div>
+                      <div class="grid-1-5" style="padding-left:5px;"><input class="transp" type="radio" name="system.targeting" value="dis" {{checked (eq system.targeting  "dis")}} /></div>
+                  </div>
+                </div>
+                <div class="grid-4-2 system-tray">
+                  <div style="padding-top: 6px; display:grid; grid-template-columns: 36px 36px 36px 36px 37px grid-template-rows: 30px;">
+                      <div class="grid-1-1" style="padding-left:12px;"><input  type="radio" name="system.thrusters" value="adv" {{checked (eq system.thrusters  "adv")}} /></div>
+                      <div class="grid-1-2" style="padding-left:4px;"><input class="transp"  type="radio" name="system.thrusters" value="edg" {{checked (eq system.thrusters  "edg")}} /></div>
+                      <div class="grid-1-3"  style="padding-left:4px;"><input class="transp" type="radio" name="system.thrusters" value="nom" {{checked (eq system.thrusters  "nom")}} /></div>
+                      <div class="grid-1-4"><input class="transp" type="radio" name="system.thrusters" value="hin" {{checked (eq system.thrusters  "hin")}} /></div>
+                      <div class="grid-1-5" style="padding-left:5px;"><input class="transp" type="radio" name="system.thrusters" value="dis" {{checked (eq system.thrusters  "dis")}} /></div>
+                  </div>
+                </div>
+                <div class="grid-6-2 system-tray">
+                  <div style="padding-top: 6px; display:grid; grid-template-columns: 36px 36px 36px 36px 37px grid-template-rows: 30px;">
+
+                      <div class="grid-1-1" style="padding-left:12px;"><input  type="radio" name="system.engines" value="adv" {{checked (eq system.engines  "adv")}} /></div>
+                      <div class="grid-1-2" style="padding-left:4px;"><input class="transp"  type="radio" name="system.engines" value="edg" {{checked (eq system.engines  "edg")}} /></div>
+                      <div class="grid-1-3"  style="padding-left:4px;"><input class="transp" type="radio" name="system.engines" value="nom" {{checked (eq system.engines  "nom")}} /></div>
+                      <div class="grid-1-4"><input class="transp" type="radio" name="system.engines" value="hin" {{checked (eq system.engines  "hin")}} /></div>
+                      <div class="grid-1-5" style="padding-left:5px;"><input class="transp" type="radio" name="system.engines" value="dis" {{checked (eq system.engines  "dis")}} /></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
     <div>
-        <div class="nav-structure">
-          <div class="nav-header grid-header">
+          <div style="position: absolute; left: 350px; visibility:{{ localize "visible" }};">
+              <div style="display:grid; grid-template-columns: 90px 90px 90px 90px 90px">
+                <div class="grid-1-1">
+                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex0 }}    
+                </div>
+                <div class="grid-1-2" >
+                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex1 }}    
+                  
+                </div>
+                <div class="grid-1-3" >
+                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex2 }}       
+                </div>
+                <div class="grid-1-4" >
+                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex3 }}       
+                </div>
+                <div class="grid-1-5" >
+                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex4 }}                  
+                </div>
+            </div>
+          </div>
+      <div>
+      {{> "systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs"}}
+    </div>
+
+    <div >
+        <div class="nav-structure-vehicle">
+          <div class="nav-header-vehicle grid-header">
 
           <nav class="sheet-tabs" style="border: 0px solid; " data-group="primary">
               <span style="padding-left: 95px"></span>
@@ -24,15 +169,15 @@
           </nav>
 
         </div>
-      <div class="vitals-left grid-2-1"></div>
-      <div class="grid-2-2" style="padding: 5px;">
-        <section class="sheet-body" >
-          {{> "systems/ad6_robotech/templates/sheets/partials/character-section-items.hbs"}}
-        </section>
+        <div class="vitals-left grid-2-1"></div>
+        <div class="grid-2-2" style="padding: 5px;  max-height: 300px; overflow-y:scroll; overflow-x: hidden;">
+          <section class="sheet-body" >
+            {{> "systems/ad6_robotech/templates/sheets/partials/vehicle-section-items.hbs"}}
+          </section>
 
-    </div>
-    <div class="vitals-right grid-2-3"></div>
-  </div>
+        </div>
+          <div class="vitals-right grid-2-3"></div>
+        </div>
     </div>
   </form>
 </div>

@@ -129,12 +129,18 @@
        }
         ,"vehicle":{
              "templates":["vehicleCommon","lieutenant-skills","swarm-details","rollInfo"]
+             ,"sensors":""
+             ,"targeting":""
+             ,"thrusters": ""
+             ,"engines": ""
         }
         
 
     }
    ,"Item" :{
-         "types":["skill","gear", "equipmentsuite","talent"]
+         "types":["skill","gear", "equipmentsuite","talent","feature","hardware"]
+        ,"feature":{"templates":["itemdescription"]}
+        ,"hardware":{"templates":["itemdescription"],"status": false, "suite": false}
         ,"templates":{
              "itemdescription":{ "description":"", "image":"" }
             ,"hardware": { "hardware": false , "status": true }
