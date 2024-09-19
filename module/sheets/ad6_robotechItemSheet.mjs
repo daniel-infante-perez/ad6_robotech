@@ -27,7 +27,7 @@ export default class ad6_robotechItemSheet extends ItemSheet{
         if(!(data.system.benefit===undefined)&&!(data.system.benefit===null)){data.system.benefit = game.i18n.localize(data.system.intcad1);}
         if(!(data.system.cost===undefined)&&!(data.system.cost===null)){data.system.cost = game.i18n.localize(data.system.intcad2);}*/
         
-        
+        /*
         data.item.name = (this.isDefinedLocalization(data.system.intname)?game.i18n.localize(data.system.intname):data.item.name);
         data.system.description = (this.isDefinedLocalization(data.system.intdesc)?game.i18n.localize(data.system.intdesc):data.system.description);
 
@@ -40,7 +40,7 @@ export default class ad6_robotechItemSheet extends ItemSheet{
             data.system.cost = (this.isDefinedLocalization(data.system.intcad2)?game.i18n.localize(data.system.intcad2):data.system.cost);
         }
 
-
+*/
         data.flags = itemData.flags;
 
         return data;

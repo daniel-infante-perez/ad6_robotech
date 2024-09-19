@@ -181,8 +181,26 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
             html.find(".hex-check").click(this._onHexCheck.bind(this));
 
             html.find(".item-create").click(this._onItemCreate.bind(this));
+
+
+            html.find(".hardware-status").click(this._onHardwareStatus.bind(this));
+            html.find(".hardware-status").click(this._onHardwareStatus.bind(this));
+            
     }
     
+    _onHardwareStatus(event)
+    {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        let target = element.closest(".item").dataset.target;
+        let item = this.actor.items.get(itemId);
+
+        if(target=="system.status")
+            item.update({"system.status":!item.system.status});
+        if(target=="system.suite")
+            item.update({"system.suite":!item.system.suite});
+    }
     getItemOnItemId(event)
     {
         event.preventDefault();

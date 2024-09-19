@@ -1,6 +1,6 @@
 <div class="hardware-structure">
-    <div class="hardware-suite">
-        <input class="smachk" type="checkbox" name="system.status" {{checked system.status}}/>
+    <div class="hardware-suite hardware-status item" data-item-id="{{_id}}" data-target="system.suite">
+        <input class="smachk"  type="checkbox" name="system.suite" {{checked system.suite}}/>
     </div>
     <div style="width: 3px; height:30px;"></div>
     <div class="nature-disposition-input item" 
@@ -10,7 +10,7 @@
         <div><a class="item-edit">{{name}}</a></div>
         <div><a class="item-description"><i class="fas fa-comment faiconcolor"></i></a></div>
     </div>
-    <div class="nature-disposition-chk">
+    <div class="nature-disposition-chk hardware-status item" data-item-id="{{_id}}" data-target="system.status">
         <input class="smachk" type="checkbox" name="system.status" {{checked system.status}}/>
     </div>
 </div>

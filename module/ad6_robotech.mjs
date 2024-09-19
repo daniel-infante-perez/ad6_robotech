@@ -43,7 +43,44 @@ async function preloadHandlebarsTemplates() {
     ]);
   };
   
+function updatePack(cad)
+{
+  try{
+      const packSkills = game.packs.get(cad);
+      const packDataSkills = packSkills.getDocuments();
+      if(packSkills!=undefined){
+        let i =0;
+        for (const value of packSkills) {
+          value.prepareData();
+          i++;
+        }
+        console.log(cad + " <-- Idioma Actualizado");
 
+      }
+  }
+  catch(error)
+  {
+    console.log("ERROR:" + cad + " No existe");
+  }
+
+}
+Hooks.once("ready", function(){
+
+  // Actualiza idioma de los objetos bien configurados del juego
+    const gameItems = game.items;
+  
+    for (const value of gameItems ) {
+      value.prepareData();
+    }
+    console.log("game.items [" + gameItems.size + "] <-- Idioma Actualizado");
+
+    updatePack("ad6_robotech_compendium.skills");
+    updatePack("ad6_robotech_compendium.talents");
+    updatePack("ad6_robotech_macross_saga.equipmentsuite");
+    updatePack("ad6_robotech_macross_saga.gear");
+    updatePack("ad6_robotech_macross_saga.mechaequipment");
+
+});
 
 Hooks.once("init", function(){
     console.log("AD6 Robotech - Cargando Hooks Once Init")
@@ -59,8 +96,11 @@ Hooks.once("init", function(){
     Actors.registerSheet("ad6_robotech",ad6_robotechCharacterSheet,{ makeDefalut: true});
     preloadHandlebarsTemplates();
     
+
    // Handlebars.registerHelper("optionsDataList",function) no sé hacer el código
    Handlebars.registerHelper("enriquecer",function(t){
     return TextEditor.enrichHTML(t, {async:true});
+
+
    });
 });

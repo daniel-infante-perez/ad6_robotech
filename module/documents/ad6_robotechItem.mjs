@@ -5,12 +5,34 @@ export default class ad6_robotechItem extends Item{
         ,"equipmentsuite": "systems/ad6_robotech/templates/cards/equipmentsuite-card.hbs"
         ,"skill":"systems/ad6_robotech/templates/cards/skill-card.hbs"
     }
-    
+    isDefinedLocalization(localization_string)
+    {
+        let translated = game.i18n.localize(localization_string);
+        
+        return (!(translated===undefined)&&!(translated===null)&&!(translated===""));
+    }
     prepareData() {
         super.prepareData();
         let cad = "systems/ad6_robotech/assets/"+this.type+".svg";
         
         this.img = cad;
+        
+        
+        this.name = (this.isDefinedLocalization(this.system.intname)?game.i18n.localize(this.system.intname):this.name);
+        this.update({"name":this.name});
+        this.system.description = (this.isDefinedLocalization(this.system.intdesc)?game.i18n.localize(this.system.intdesc):this.system.description);
+        this.update({"system.description":this.system.description});
+        if(!(this.system.benefit===undefined)&&!(this.system.benefit===null))
+        {
+            this.system.benefit = (this.isDefinedLocalization(this.system.intcad1)?game.i18n.localize(this.system.intcad1):this.system.benefit);
+            this.update({"system.benefit":this.system.benefit});
+        }
+        if(!(this.system.cost===undefined)&&!(this.system.cost===null))
+        {
+            this.system.cost = (this.isDefinedLocalization(this.system.intcad2)?game.i18n.localize(this.system.intcad2):this.system.cost);
+            this.update({"system.cost":this.system.cost});
+        }
+
     }
 
     message()

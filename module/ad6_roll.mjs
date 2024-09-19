@@ -33,7 +33,7 @@ export async function  coreCheck (dados,actionPhase,rollType,name,owner,message)
              name: name
             ,owner: owner
             ,rollType: game.i18n.localize("ad6_robotech.rollT." + rollType)
-            ,actionPhase: game.i18n.localize("ad6_robotech.phase." +actionPhase)
+            ,actionPhase: (actionPhase==""?"":game.i18n.localize("ad6_robotech.phase." +actionPhase))
             ,message: message
             ,dice: roll.dice
             ,successes: successes

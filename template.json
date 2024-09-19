@@ -143,7 +143,7 @@
         ,"hardware":{"templates":["itemdescription"],"status": false, "suite": false}
         ,"templates":{
              "itemdescription":{ "description":"", "image":"" }
-            ,"hardware": { "hardware": false , "status": true }
+            
             ,"object": { "requisition": "" ,"range": "" ,"damage": "" ,"pen":"" ,"aoe":"" ,"ext":"" }
             ,"configinfo": {"intname": "", "intdesc": "", "intcad1": "", "intcad2":""}
         }
@@ -153,11 +153,11 @@
             ,"benefit":""
             ,"skill": 0 }
         ,"gear":{
-            "templates": ["itemdescription", "hardware","object", "configinfo"]
+            "templates": ["itemdescription", "object", "configinfo"]
            
         }
         ,"equipmentsuite":{
-            "templates": ["itemdescription","hardware","object", "configinfo"]
+            "templates": ["itemdescription","object", "configinfo"]
            ,"value": 0
            ,"max": 0
            ,"skill":0
