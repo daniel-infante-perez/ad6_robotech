@@ -117,7 +117,7 @@
             ,"penExp": "Perfora Armadura"
             ,"aoeExp": "Área de Efecto"
             ,"skillExp": "Habilidad"
-            ,"usesExp": "Cantidad Usos"
+            ,"usesExp": "Max Usos"
             ,"leftExp": "Usos Restantes"
             ,"hardExp": "Sistema"
             ,"statExp": "Estado"
@@ -167,7 +167,20 @@
             ,"talentTooltip":"Crear un nuevo talento"
             ,"featureTooltip":"Crear una nueva característica"
             ,"hardwareTooltip":"Crear un nuevo hardware"
-
+            ,"rollTooltip":"Tirar los dados"
+            ,"resetRollTooltip":"Resetear los dados"
+            ,"chatTooltip":"Enviar al Chat"
+            ,"editTooltip":"Editar Item"
+            ,"refreshTooltip":"Recuperar Usos"
+            ,"useTalentTooltip":"Usar Talento"
+            ,"deleteTooltip": "Borrar Item"
+            ,"dialogAlertBurnout": "Te estás sobreexigiendo!"
+            ,"dialogBurnoutText": "Estás tirando más dados en habilidades que tu capacidad de Agotamiento. Si lo haces, ganarás fatiga. ¿Estás seguro? "
+            ,"dialogAlert":"¡No puedes hacer eso!"
+            ,"dialogSills": "No puedes usar más de dos habilidades en una fase."
+            ,"dialogSuites": "No puedes usar más de una suite de equipo en un turno."
+            ,"dialogCap":"Solo tirar hasta el Agotamiento"
+            ,"rerollTooltip": "Volver a Tirar lo seleccionado"
 
         }
         ,"message":

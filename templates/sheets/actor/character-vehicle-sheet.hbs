@@ -12,6 +12,12 @@
       </div>
       <div class="grid-1-3">
         <img class='profile-img' width="150" src='{{actor.img}}' data-edit='img' title='{{actor.name}}'/>
+        <select name="system.pilot"  class="midwid">
+        {{#if rooster }}
+        {{selectOptions rooster selected = system.pilot  localize=false}}
+        {{/if}}
+        </select>
+  
       </div>
     </div>
 
@@ -24,7 +30,7 @@
                 </div>
                 <div><a title="{{localize "ad6_robotech.sheetText.featureTooltip"}}" class="item-create"><i class="fas fa-plus faiconcolor"></i></a></div>
               </div>
-              <div class="grid-2-1" style="max-height: 160px; overflow-y:scroll; overflow-x: hidden;">
+              <div class="grid-2-1 contents-container" style="max-height: 160px; overflow-y:scroll; overflow-x: hidden;">
                 {{#if features }}
                   <div style="display: grid; gap:3px;">
                     {{#each features as |feature id|}}
@@ -43,7 +49,7 @@
                 </div>
                 <div><a title="{{localize "ad6_robotech.sheetText.hardwareTooltip"}}" class="item-create"><i class="fas fa-plus faiconcolor"></i></a></div>
               </div>
-              <div class="grid-2-1" style="max-height: 160px; overflow-y:scroll; overflow-x: hidden;">
+              <div class="grid-2-1 contents-container" style="max-height: 160px; overflow-y:scroll; overflow-x: hidden;">
                 {{#if hardwares }}
                   <div style="display: grid; gap:3px;">
                     {{#each hardwares as |hardware id|}}
@@ -135,16 +141,28 @@
     </div>
 
     <div>
-          <div style="position: absolute; left: 350px; {{ visibleSwDiv }}">
-              <div style="display:grid; grid-template-columns: 90px 90px 90px ">
+          
+          <div style="position: absolute; left: 350px; {{ visibleMnDiv }}">
+              <div style="display:grid; grid-template-columns: 92px 90px 90px ">
                 <div class="grid-1-1">
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex12 }}    
+                  <div>
+                   <div style="float:left">
+                      {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex10 }}  
+                   </div>  
+                      <div style="vertical-align: center; align-content: center;float:left;">
+                        <br><br><a class="item-reset"><i title="{{localize "ad6_robotech.sheetText.resetRollTooltip"}}" class="fas fa-regular fa-rectangle-xmark faiconcolor"></i></a>
+                      </div>
+                      <div style="vertical-align: center; align-content: center;{{ visibleReroll }}">
+                        <br><br><a class="item-reroll"><i title="{{localize "ad6_robotech.sheetText.rerollTooltip"}}" class="fas fa-regular fa-rotate-right faiconcolor"></i></a>
+                      </div>                        
+                    </div>
                 </div>
-                <div class="grid-1-2">
+
+                <div class="grid-1-2" style="{{ visibleSwDiv }}">
                   {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex9 }}    
                 </div>
-                <div class="grid-1-3" >
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex10 }}    
+                <div class="grid-1-3" style="{{ visibleSwDiv }}">
+                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex12 }}    
                   
                 </div>
               </div>  
@@ -180,6 +198,12 @@
 
           <nav class="sheet-tabs" style="border: 0px solid; " data-group="primary">
               <span style="padding-left: 95px"></span>
+              {{#if skills }}
+                <strong>[</strong> <a class="item" data-tab="skills"><strong>{{ localize "ad6_robotech.sheetText.skills" }}</strong></a>
+              {{/if}}
+              {{#if talents }}
+                <a class="item" data-tab="talents"><strong>{{ localize "ad6_robotech.sheetText.talents" }}</strong></a> <strong>]</strong>
+              {{/if}}
               <a class="item" data-tab="equipment"><strong>{{ localize "ad6_robotech.sheetText.equipment" }}</strong></a>
               <a title="{{localize "ad6_robotech.sheetText.gearTooltip"}}" class="item-create item" data-type="gear"><i class="fas fa-plus faiconcolor"></i></a>
               <a title="{{localize "ad6_robotech.sheetText.suiteTooltip"}}" class="item-create item" data-type="equipmentsuite"><i class="fas fa-plus faiconcolor"></i></a>
@@ -187,11 +211,16 @@
 
         </div>
         <div class="vitals-left grid-2-1"></div>
-        <div class="grid-2-2" style="padding: 5px;  max-height: 300px; overflow-y:scroll; overflow-x: hidden;">
+        <div class="grid-2-2 contents-container item" style="padding: 5px;  max-height: 300px; overflow-y:scroll; overflow-x: hidden;">
           <section class="sheet-body" >
+              {{#if skills }}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-section-skills.hbs"}}
+              {{/if}}
+              {{#if talents }}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-section-talents.hbs"}}
+              {{/if}}
             {{> "systems/ad6_robotech/templates/sheets/partials/vehicle-section-items.hbs"}}
           </section>
-
         </div>
           <div class="vitals-right grid-2-3"></div>
         </div>

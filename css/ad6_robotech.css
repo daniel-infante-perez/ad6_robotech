@@ -90,6 +90,7 @@
 
 
   .megwid{ width: 400px; }
+  .morwid{ width: 300px; }
   .lonwid{ width: 250px; }
   .mlnwid{ width: 230px; }
   .mehwid{ width: 180px; }
@@ -99,7 +100,14 @@
   .smawid{ width: 60px; }
   .uffwid{ width: 50px; }
   .tinwid{ width: 40px; }
+  .ttnwid{ width: 30px; }
+  .vtcwid{ width: 25px; }
+  .vntwid{ width: 15px; }
 
+ /*input[type="checkbox"]
+ {
+  margin-left:0px;
+ }*/
   .transinput{ background: transparent; border-radius: 4px; border: 1px solid #AAAAAA; padding: 5px; }  
   .invinput{ background: transparent; border-radius: 4px; border: 0; }
   .transp{ background: transparent; }
@@ -111,6 +119,13 @@
         -webkit-transform: scale(0.7); /* Safari and Chrome */
         -o-transform: scale(0.7); /* Opera */
         transform: scale(0.7);
+  }
+  .tinchk{
+    -ms-transform: scale(0.5); /* IE */
+    -moz-transform: scale(0.5); /* FF */
+    -webkit-transform: scale(0.5); /* Safari and Chrome */
+    -o-transform: scale(0.5); /* Opera */
+    transform: scale(0.5);
 }
   
 

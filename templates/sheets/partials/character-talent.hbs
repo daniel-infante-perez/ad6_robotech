@@ -1,11 +1,19 @@
 <div class="suite-border talent-structure">
-        <div class="gear-name talent-card item" style="display: grid; grid-template-columns:15px 235px 15px 15px 15px " data-item-id="{{_id}}">
-            <div><a class="item-delete" title="Borrar"><i class="fas fa-trash faiconcolor" ></i></a></div>
-            <div><a class="item-edit">{{name}}</a></div>
-            <div><a class="item-description"><i class="fas fa-comment faiconcolor"></i></a></div>
-            <div><a class="item-refresh"><i class="fas fa-rotate-right faiconcolor"></i></a></div>
+        <div class="gear-name talent-card item" style="display: grid; grid-template-columns:15px 228px 13px 13px 13px 13px " data-item-id="{{_id}}">
+            <div><a class="item-delete" title="Borrar"><i class="fas fa-trash faiconcolor fa-sm" ></i></a></div>
+                <div class="item" data-item-id="{{_id}}" data-field="name">
+                    <input style="text-align: left;" class=" morwid invinput change" value="{{name}}"/>
+                </div>
+            <div style="padding-top: 7px;"><a class="item-description"><i class="fas fa-comment faiconcolor fa-sm"></i></a></div>
+            <div><a class="item-edit"><i class="fas fa-regular fa-pen-to-square faiconcolor fa-sm"></i></a></div>
+            <div><a class="item-refresh"><i class="fas fa-rotate-right faiconcolor fa-sm"></i></a></div>
             <div><a class="item-use"><i class="fas fa-bolt faiconcolor"></i></a></div>
         </div>
-        <div class="gear-init" >{{system.max}}</div>
-        <div class="gear-end" >{{system.value}}</div>
+        <div class="gear-init item" data-item-id="{{_id}}" data-field="system.max" >
+            <div style="float:left"><input style="text-align: center;" class=" tinwid invinput change" value="{{system.max}}"/></div>
+        </div>
+        <div class="gear-end item" data-item-id="{{_id}}" data-field="system.value" >
+            <div style="float:left"><input style="text-align: center;" class=" tinwid invinput change" value="{{system.value}}"/></div>
+            <div style="float:right"><a class="infinity" ><i class="fas fa-infinity faiconcolor fa-2xs"></i></a></div></div>
+        
     </div>

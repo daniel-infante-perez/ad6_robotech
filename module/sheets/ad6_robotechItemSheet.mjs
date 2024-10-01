@@ -52,4 +52,28 @@ export default class ad6_robotechItemSheet extends ItemSheet{
         
         return (!(translated===undefined)&&!(translated===null)&&!(translated===""));
     }
+
+    getItemOnItemId(event)
+    {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        let item = this.actor.items.get(itemId);
+        return item;
+    }
+
+    activateListeners(html)
+    {
+        html.find(".infinity").click(this._onInfinity.bind(this));
+    }
+    _onInfinity(event)
+    {
+        event.preventDefault();
+       
+
+        this.object.update({"system.max":"∞"});
+            this.object.update({"system.value":"∞"});
+
+
+    }
 }

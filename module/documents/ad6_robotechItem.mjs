@@ -73,7 +73,10 @@ export default class ad6_robotechItem extends Item{
             }
             else
             {
-                res = ((this.system.value > 0)||((this.system.max=="")&&(this.system.value=="")));
+                let esVacio = ((this.system.max=="")&&(this.system.value==""));
+                let esInfinito = ((this.system.max=="∞")&&(this.system.value=="∞"));
+        
+                res = ((this.system.value > 0)||esVacio||esInfinito);
             }
         }
         else { res =  false; }
@@ -90,8 +93,10 @@ export default class ad6_robotechItem extends Item{
     async consume()
     {
         let nuevo = this.system.value-1;
-        if(!((this.system.max=="")&&(this.system.value=="")))
-        this.update({ 'system.value': nuevo });
+        let esVacio = ((this.system.max=="")&&(this.system.value==""));
+        let esInfinito = ((this.system.max=="∞")&&(this.system.value=="∞"));
+        if(!(esVacio||esInfinito )){
+        this.update({ 'system.value': nuevo });}
 
     }
     async describe (verbose)

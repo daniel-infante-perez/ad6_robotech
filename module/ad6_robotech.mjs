@@ -79,6 +79,11 @@ Hooks.once("ready", function(){
     updatePack("ad6_robotech_macross_saga.equipmentsuite");
     updatePack("ad6_robotech_macross_saga.gear");
     updatePack("ad6_robotech_macross_saga.mechaequipment");
+    updatePack("ad6_robotech_macross_saga.mecha");
+    updatePack("ad6_robotech_homefront.equipmentsuite");
+    updatePack("ad6_robotech_homefront.gear");
+    updatePack("ad6_robotech_homefront.mechaequipment");
+    updatePack("ad6_robotech_homefront.mecha");
 
 });
 

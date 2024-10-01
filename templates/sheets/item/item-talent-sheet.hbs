@@ -18,9 +18,18 @@
             <section class="sheet-body" >
                 <div class="tab general" data-group="primary" data-tab="general">
                     <div class="skill-item-structure">
-                        <div class="grid-1-1">{{ localize "ad6_robotech.sheetText.uses"}}</div><div class="grid-1-2"><input class="transinput midwid" name="system.max" value="{{system.max}}" data-dtype="String"/></div>
-                        <div class="grid-2-1">{{ localize "ad6_robotech.sheetText.left"}}</div><div class="grid-2-2"><input class="transinput midwid" name="system.value" value="{{system.value}}" data-dtype="String"/></div>
+                        <div class="grid-1-1"><div style="float: left;">{{ localize "ad6_robotech.sheetText.uses"}}</div>
+                            <div style="float: left;" class="item" data-item-id="{{_id}}" style="float: left;">
+                            &nbsp;&nbsp;&nbsp;<a class="infinity" ><i class="fas fa-infinity faiconcolor"></i></a>
+                            </div>
+                        </div>
+
+
+                        <div class="grid-1-2"><input class="transinput midwid" name="system.max" value="{{system.max}}" data-dtype="String"/></div>
+                        <div class="grid-2-1">{{ localize "ad6_robotech.sheetText.left"}}</div>
+                        <div class="grid-2-2"><input class="transinput midwid" name="system.value" value="{{system.value}}" data-dtype="String"/></div>
                     </div>
+                    <br/>
                     <div>{{editor system.description target="system.description" button=true}} </div>
                 </div>
              {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}

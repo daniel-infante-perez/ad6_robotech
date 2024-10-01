@@ -2,7 +2,19 @@
     "Actor":{
         "types":["main","lieutenant","swarm","vehicle"]
         ,"templates":{
-            "vehicleCommon":{
+            "rerollStatus":
+            {
+                "reroll":
+                {
+                    "dice":0
+                    ,"phase":""
+                    ,"rollType":""
+                    ,"owner":""   
+                    ,"name":""
+                    ,"message":""
+                }
+            }
+            ,"vehicleCommon":{
                  "scale":""
                 ,"armor":{
                     "value":0
@@ -56,8 +68,8 @@
            }
         
         ,"main": {
-             "templates":["wounds","rollInfo"]
-            ,"race": ""
+             "templates":["wounds","rollInfo","rerollStatus"]
+             ,"race": ""
             ,"career": ""
             ,"rank":
             {
@@ -115,7 +127,7 @@
            ,"fatigue4": ""
            ,"fatigue5": ""
            ,"bio": ""
-
+           ,"dice":0
 
           }      
        ,"lieutenant"  :
@@ -128,11 +140,12 @@
             "templates":["swarm-details","rollInfo"]
        }
         ,"vehicle":{
-             "templates":["vehicleCommon","lieutenant-skills","swarm-details","rollInfo"]
+             "templates":["vehicleCommon","lieutenant-skills","swarm-details","rollInfo","rerollStatus"]
              ,"sensors":""
              ,"targeting":""
              ,"thrusters": ""
              ,"engines": ""
+             ,"pilot":""
         }
         
 
@@ -141,6 +154,7 @@
          "types":["skill","gear", "equipmentsuite","talent","feature","hardware"]
         ,"feature":{"templates":["itemdescription"]}
         ,"hardware":{"templates":["itemdescription"],"status": false, "suite": false}
+        ,"stack":{"stack": false}
         ,"templates":{
              "itemdescription":{ "description":"", "image":"" }
             
@@ -148,16 +162,17 @@
             ,"configinfo": {"intname": "", "intdesc": "", "intcad1": "", "intcad2":""}
         }
         ,"skill":{
-             "templates": ["itemdescription", "configinfo"]
+             "templates": ["itemdescription", "configinfo","stack"]
             ,"cost":""
             ,"benefit":""
-            ,"skill": 0 }
+            ,"skill": 0 
+            }
         ,"gear":{
             "templates": ["itemdescription", "object", "configinfo"]
            
         }
         ,"equipmentsuite":{
-            "templates": ["itemdescription","object", "configinfo"]
+            "templates": ["itemdescription","object", "configinfo","stack"]
            ,"value": 0
            ,"max": 0
            ,"skill":0

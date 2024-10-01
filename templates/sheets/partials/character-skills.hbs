@@ -1,13 +1,32 @@
 <div class="gear-border skill-structure">
-        <div class="skill-name skill-card item" style="display: grid; grid-template-columns:15px 155px 15px 15px " data-item-id="{{_id}}">
-            <div><a class="item-delete"><i class="fas fa-trash faiconcolor"></i></a></div>
-            <div><a class="item-edit">{{name}}</a></div>
-            <div><a class="item-description"><i class="fas fa-comment faiconcolor"></i></a></div>
-            <div><a class="core-check"><i class="fas fa-dice faiconcolor"></i></a></div>
+        <div class="skill-name skill-card item" style="display: grid; grid-template-columns:15px 144px 13px 13px 15px " data-item-id="{{_id}}">
+            <div style="padding-top: 7px;"><a class="item-delete"><i class="fas fa-trash faiconcolor fa-sm"></i></a></div>
+            <div style="padding-top: 7px;" class="item" data-item-id="{{_id}}" data-field="name">
+                <input style="text-align: left;" class=" mehwid invinput change" value="{{name}}"/>
+            </div>
+            <div style="padding-top: 7px;"><a class="item-description"><i class="fas fa-comment faiconcolor fa-sm"></i></a></div>
+            <div style="padding-top: 7px;"><a class="item-edit"><i class="fas fa-regular fa-pen-to-square faiconcolor fa-sm"></i></a></div>
+            <div  data-item-id="{{_id}}" data-target="" >
+                <input style="margin-left:0px;" class="smachk stack" type="checkbox" {{checked system.stack}}/>
+            </div>
+            <!--<div><a class="core-check"><i class="fas fa-dice faiconcolor"></i></a></div>-->
+           <!-- <div data-item-id="{{_id}}" data-target="" >
+                <input class="smachk" type="checkbox"/>
+            </div>-->
         </div>
-        <div class="skill-benefit">{{localize system.benefit}}</div>
-        <div class="skill-cost" >{{system.cost}}</div>
-        <div class="gear-end" >{{system.skill}}</div>
-    </div>
+        <div class="skill-benefit item" data-item-id="{{_id}}" data-field="system.benefit">
+            <input style="text-align: left;" class=" growid invinput change" value="{{system.benefit}}"/>
+        </div>
+        <div class="skill-cost item" data-item-id="{{_id}}" data-field="system.cost" >
+            <input style="text-align: left;" class=" growid invinput change" value="{{system.cost}}"/>
+        </div>
+        <div class="gear-end item" data-item-id="{{_id}}" data-field="system.skill"  >
+            <input style="text-align: center;" class=" vntwid invinput change" value="{{system.skill}}"/>
+        </div>
+        
 
+
+   
+
+    </div>
 

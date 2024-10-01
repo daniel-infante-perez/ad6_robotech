@@ -1,13 +1,31 @@
 <div class="suite-border suite-structure">
-        <div class="suite-name suite-card item" style="display: grid; grid-template-columns:15px 322px 15px 15px 15px" data-item-id="{{_id}}">
-            <div><a class="item-delete"><i class="fas fa-trash faiconcolor"></i></a></div>
-            <div><a class="item-edit">{{name}}</a></div>
-            <div><a class="item-description"><i class="fas fa-comment faiconcolor"></i></a></div>
-            <div><a class="item-refresh"><i class="fas fa-rotate-right faiconcolor"></i></a></div>
-            <div><a class="core-check"><i class="fas fa-dice faiconcolor"></i></a></div>
+        <div class="suite-name suite-card item" style="display: grid; grid-template-columns:15px 308px 13px 13px 13px 20px" data-item-id="{{_id}}">
+            <div style="padding-top: 7px;"><a class="item-delete"><i class="fas fa-trash faiconcolor fa-sm"></i></a></div>
+            <div style="padding-top: 7px;">
+                 <div class="item" data-item-id="{{_id}}" data-field="name">
+                    <input style="text-align: left;" class=" morwid invinput change" value="{{name}}"/>
+                </div>
+                
+            </a></div>
+            <div style="padding-top: 7px;"><a class="item-description"><i class="fas fa-comment faiconcolor fa-sm"></i></a></div>
+            <div style="padding-top: 7px;"><a class="item-edit"><i class="fas fa-regular fa-pen-to-square faiconcolor fa-sm"></i></a></div>
+            <div style="padding-top: 7px;"><a class="item-refresh"><i class="fas fa-rotate-right faiconcolor fa-sm"></i></a></div>
+            <div  data-item-id="{{_id}}" style="align-items: left;">
+                <input style="margin-left:0px;" class="smachk stack" type="checkbox" {{checked system.stack}}/>
+                
+            </div>
         </div>
-        <div class="gear-init" >{{system.skill}}</div>
-        <div class="gear-mid" >{{system.max}}</div>
-        <div class="gear-end" >{{system.value}}</div>
+        	  <div class="grid-1-2 gear-init item" data-item-id="{{_id}}" data-field="system.skill">
+                <input style="text-align: center;" class=" uffwid invinput change" value="{{system.skill}}"/>
+            </div>
+                <div class="grid-1-3 gear-mid max item" data-item-id="{{_id}}" data-field="system.max" >
+            <input style="text-align: center;" class=" tinwid invinput change" value="{{system.max}}"/>
+        </div>
+        <div class="grid-1-4 gear-end value item" data-item-id="{{_id}}" data-field="system.value" >
+            <div style="float:left">
+                <input style="text-align: center;" class=" tinwid invinput change" value="{{system.value}}"/>
+            </div>
+            <div style="float:right"><a class="infinity" ><i class="fas fa-infinity faiconcolor fa-2xs"></i></a></div>
+        </div>
     </div>
 

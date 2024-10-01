@@ -119,7 +119,7 @@
             ,"penExp": "Armor Penetration"
             ,"aoeExp": "Area of Effect"
             ,"skillExp": "Skill"
-            ,"usesExp": "Number of Uses"
+            ,"usesExp": "Max Uses"
             ,"leftExp": "Uses Left"
             ,"hardExp": "Hardware"
             ,"statExp": "Status"
@@ -169,6 +169,21 @@
             ,"talentTooltip":"Create new talent"
             ,"featureTooltip":"Create new feature"
             ,"hardwareTooltip":"Create new hardware"
+            ,"rollTooltip":"Roll dice"
+            ,"resetRollTooltip":"Reset Roll Configuration"
+            ,"chatTooltip":"Send to Chat"
+            ,"editTooltip":"Edit Item"
+            ,"refreshTooltip":"Refresh Uses"
+            ,"useTalentTooltip":"Use Talent"
+            ,"deleteTooltip": "Delete Item"
+            ,"dialogAlertBurnout": "You are going to fatigue!"
+            ,"dialogBurnoutText": "You are rolling more dice in skills than Burnout, so you'll fatigue yourself. Are you sure? "
+            ,"dialogAlert":"You can't do that!"
+            ,"dialogSills": "You can't use more than two skills in a single phase."
+            ,"dialogSuites": "You can't use more than one equipment suite in a single turn."
+            ,"dialogCap":"Cap the pool dice to Burnout"
+            ,"rerollTooltip": "Reroll selected"
+            
         }
         ,"message":
         {

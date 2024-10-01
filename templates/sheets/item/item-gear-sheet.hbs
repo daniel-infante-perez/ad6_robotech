@@ -24,9 +24,6 @@
                         <div class="grid-3-1">{{ localize "ad6_robotech.sheetText.dmgExp"}}</div>
                         <div class="grid-2-3">{{ localize "ad6_robotech.sheetText.penExp"}}</div>
                         <div class="grid-3-3">{{ localize "ad6_robotech.sheetText.aoeExp"}}</div>
-                        <!--<div class="grid-4-1">{{ localize "ad6_robotech.sheetText.hardExp"}}</div>
-                        <div class="grid-4-3">{{ localize "ad6_robotech.sheetText.statExp"}}</div>-->
-
                         <div class="grid-1-2"><input class="transinput uffwid" name="system.requisiton" value="{{system.requisiton}}" data-dtype="String"/></div>
                         <div class="grid-1-4">
                           <select name="system.range">
@@ -37,9 +34,8 @@
                         <div class="grid-3-2"><input class="transinput uffwid" name="system.damage" value="{{system.damage}}" data-dtype="String"/></div>
                         <div class="grid-2-4"><input class="transinput uffwid" name="system.pen" value="{{system.pen}}" data-dtype="String"/></div>
                         <div class="grid-3-4"><input class="transinput uffwid" name="system.aoe" value="{{system.aoe}}" data-dtype="String"/></div>
-<!--                        <div class="grid-4-2"><input name="system.hardware" type="checkbox" {{checked system.hardware}}/></div>
-                        <div class="grid-4-4"><input name="system.status" type="checkbox" {{checked system.status}}/></div>-->
                     </div>
+                    <br/>
                     <div>{{editor system.description target="system.description" button=true}} </div>
                 </div>
              {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}

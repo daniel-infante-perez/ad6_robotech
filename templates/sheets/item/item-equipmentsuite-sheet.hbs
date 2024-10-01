@@ -24,9 +24,12 @@
                         <div class="grid-3-1">{{ localize "ad6_robotech.sheetText.dmgExp"}}</div>
                         <div class="grid-2-3">{{ localize "ad6_robotech.sheetText.penExp"}}</div>
                         <div class="grid-3-3">{{ localize "ad6_robotech.sheetText.aoeExp"}}</div>
-                       <!-- <div class="grid-4-1">{{ localize "ad6_robotech.sheetText.hardExp"}}</div>
-                        <div class="grid-4-3">{{ localize "ad6_robotech.sheetText.statExp"}}</div>-->
-                        <div class="grid-5-1">{{ localize "ad6_robotech.sheetText.usesExp"}}</div>
+                        <div class="grid-5-1" style="vertical-align: middle;">
+                            <div style="float: left;">{{ localize "ad6_robotech.sheetText.usesExp"}}</div>
+                            <div style="float: left;" class="item" data-item-id="{{_id}}" style="float: left;">
+                            &nbsp;&nbsp;&nbsp;<a class="infinity" ><i class="fas fa-infinity faiconcolor"></i></a>
+                            </div>
+                        </div>
                         <div class="grid-5-3">{{ localize "ad6_robotech.sheetText.leftExp"}}</div>
                         <div class="grid-6-1">{{ localize "ad6_robotech.sheetText.skillExp"}}</div>
 
@@ -40,12 +43,13 @@
                         <div class="grid-3-2"><input class="transinput uffwid" name="system.damage" value="{{system.damage}}" data-dtype="String"/></div>
                         <div class="grid-2-4"><input class="transinput uffwid" name="system.pen" value="{{system.pen}}" data-dtype="String"/></div>
                         <div class="grid-3-4"><input class="transinput uffwid" name="system.aoe" value="{{system.aoe}}" data-dtype="String"/></div>
- <!--                       <div class="grid-4-2"><input name="system.hardware" type="checkbox" {{checked system.hardware}}/></div>
-                        <div class="grid-4-4"><input name="system.status" type="checkbox" {{checked system.status}}/></div>-->
-                        <div class="grid-5-2"><input class="transinput uffwid" name="system.max" value="{{system.max}}" data-dtype="String"/></div>
-                        <div class="grid-5-4"><input class="transinput uffwid" name="system.value" value="{{system.value}}" data-dtype="String"/></div>
+                        <div class="grid-5-2"><input class="transinput uffwid" name="system.max" value="{{system.max}}" data-dtype="String"/>
+                        </div>
+                        <div class="grid-5-4"><input class="transinput uffwid" name="system.value" value="{{system.value}}" data-dtype="String"/>
+                        </div>
                         <div class="grid-6-2"><input class="transinput uffwid" name="system.skill" value="{{system.skill}}" data-dtype="String"/></div>
                     </div>
+                    <br/>
                     <div>{{editor system.description target="system.description" button=true}} </div>
                 </div>
              {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}

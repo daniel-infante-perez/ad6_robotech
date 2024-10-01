@@ -101,7 +101,21 @@
     </div>
   </div>
   <div class="grid-3-1-sp6">
-    {{> "systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs"}}
+
+    <div>
+          <div  style="position: absolute; left: 350px; display:block">
+            <div style="float:left">
+              {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex13 }}       
+            </div>
+            <div style="vertical-align: center; align-content: center;float:left;">
+              <br><br><a class="item-reset"><i title="{{localize "ad6_robotech.sheetText.resetRollTooltip"}}" class="fas fa-regular fa-rectangle-xmark faiconcolor"></i></a>
+            </div>
+            <div style="vertical-align: center; align-content: center;">
+              <br><br><a class="item-reroll"><i title="{{localize "ad6_robotech.sheetText.rerollTooltip"}}" class="fas fa-regular fa-rotate-right faiconcolor"></i></a>
+            </div>          
+            
+            </div>
+      {{> "systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs"}}</div>
   </div>
 </div>
 

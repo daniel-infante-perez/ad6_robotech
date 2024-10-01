@@ -2,7 +2,7 @@
 .skill-structure
 {
   display:grid;
-  grid-template-columns: 200px 136px 132px 45px ;
+  grid-template-columns: 200px 136px 132px 45px;
   grid-template-rows: 30px;
   gap: 3px;
 }
@@ -18,8 +18,8 @@
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 200px 30px;    
-  align-items: baseline;
-  padding-top: 7px;
+  
+  
 }
 
 .skill-benefit{
