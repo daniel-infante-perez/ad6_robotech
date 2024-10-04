@@ -21,7 +21,7 @@
     "styles": ["css/ad6_robotech.css"],
     "languages": [
       {
-        "lang": "en",
+        "lang": "en", 
         "name": "English",
         "path": "lang/en.json"
       }
