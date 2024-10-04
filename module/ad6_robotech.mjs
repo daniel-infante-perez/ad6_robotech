@@ -45,6 +45,7 @@ async function preloadHandlebarsTemplates() {
   
 function updatePack(cad)
 {
+  let i =0;
   try{
       const packSkills = game.packs.get(cad);
       const packDataSkills = packSkills.getDocuments();
