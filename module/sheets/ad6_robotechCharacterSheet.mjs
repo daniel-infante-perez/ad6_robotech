@@ -52,6 +52,8 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         data.skills = this.actor.items.filter(function(item){return item.type=="skill"});
         data.features = this.actor.items.filter(function(item){return item.type=="feature"});
         data.hardwares = this.actor.items.filter(function(item){return item.type=="hardware"});
+        data.elements = this.actor.items.filter(function(item){return item.type=="element"});
+        data.proficiencies = this.actor.items.filter(function(item){return item.type=="proficiency"});
 
         if((this.actor.type=="vehicle")&&(this.actor.system.pilot!=""))
         {
@@ -308,6 +310,12 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
             case "name":
                 item.update({"name":event.target.value});  
                 break; 
+            case "system.leftItem":
+                item.update({"system.leftItem":event.target.value});  
+                break; 
+            case "system.rightItem":
+                item.update({"system.rightItem":event.target.value});  
+                break;                 
         }
 
 

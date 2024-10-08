@@ -169,6 +169,8 @@
             ,"talentTooltip":"Create new talent"
             ,"featureTooltip":"Create new feature"
             ,"hardwareTooltip":"Create new hardware"
+            ,"elementTooltip":"Create new element line"
+            ,"proficiencyTooltip":"Create new proficiency line"
             ,"rollTooltip":"Roll dice"
             ,"resetRollTooltip":"Reset Roll Configuration"
             ,"chatTooltip":"Send to Chat"
@@ -183,6 +185,10 @@
             ,"dialogSuites": "You can't use more than one equipment suite in a single turn."
             ,"dialogCap":"Cap the pool dice to Burnout"
             ,"rerollTooltip": "Reroll selected"
+            ,"element": "new element"
+            ,"proficiency": "new proficiency"
+            
+            
             
         }
         ,"message":

@@ -24,3 +24,10 @@
   background-repeat: no-repeat;
   background-size: 557px 112px;    
 }
+
+.third-structure2
+{
+  display:grid;
+  grid-template-columns: 316px 557px;
+  grid-template-rows: 74px 112px;
+}

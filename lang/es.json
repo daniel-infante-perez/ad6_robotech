@@ -167,6 +167,9 @@
             ,"talentTooltip":"Crear un nuevo talento"
             ,"featureTooltip":"Crear una nueva característica"
             ,"hardwareTooltip":"Crear un nuevo hardware"
+            ,"elementTooltip":"Crear una nueva línea para elementos"
+            ,"proficiencyTooltip":"Crear una nueva línea para competencias"
+
             ,"rollTooltip":"Tirar los dados"
             ,"resetRollTooltip":"Resetear los dados"
             ,"chatTooltip":"Enviar al Chat"
@@ -181,6 +184,8 @@
             ,"dialogSuites": "No puedes usar más de una suite de equipo en un turno."
             ,"dialogCap":"Solo tirar hasta el Agotamiento"
             ,"rerollTooltip": "Volver a Tirar lo seleccionado"
+            ,"element": "nuevo elemento"
+            ,"proficiency": "nueva competencia"
 
         }
         ,"message":

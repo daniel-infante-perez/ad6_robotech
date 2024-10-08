@@ -18,6 +18,11 @@ async function preloadHandlebarsTemplates() {
       ,'systems/ad6_robotech/templates/sheets/partials/character-nature.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-proficiency.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-elements.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-elements-list.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-proficiency-list.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-element.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-prof.hbs'
+
       ,'systems/ad6_robotech/templates/sheets/partials/character-hexlvl.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-hexbps.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-hexspd.hbs'
@@ -40,6 +45,8 @@ async function preloadHandlebarsTemplates() {
       ,'systems/ad6_robotech/templates/sheets/partials/character-feature.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/vehicle-section-items.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/vehicle-equipmentsuite.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-third-alternative.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-third-vehicle.hbs'
     ]);
   };
   
@@ -67,6 +74,7 @@ function updatePack(cad)
 }
 Hooks.once("ready", function(){
 
+  if(game.user.isGM){
   // Actualiza idioma de los objetos bien configurados del juego
     const gameItems = game.items;
   
@@ -85,7 +93,7 @@ Hooks.once("ready", function(){
     updatePack("ad6_robotech_homefront.gear");
     updatePack("ad6_robotech_homefront.mechaequipment");
     updatePack("ad6_robotech_homefront.mecha");
-
+  }
 });
 
 Hooks.once("init", function(){

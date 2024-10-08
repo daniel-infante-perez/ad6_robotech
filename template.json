@@ -151,7 +151,7 @@
 
     }
    ,"Item" :{
-         "types":["skill","gear", "equipmentsuite","talent","feature","hardware"]
+         "types":["skill","gear", "equipmentsuite","talent","feature","hardware","element","proficiency"]
         ,"feature":{"templates":["itemdescription"]}
         ,"hardware":{"templates":["itemdescription"],"status": false, "suite": false}
         ,"stack":{"stack": false}
@@ -181,6 +181,12 @@
             "templates": ["itemdescription", "configinfo"]
            ,"value": 0
            ,"max": 0
+        }
+        ,"element":{
+            "leftItem": "", "rightItem":""
+        }
+        ,"proficiency":{
+            "leftItem": "", "rightItem":""
         }
    }
 }

@@ -1,0 +1,12 @@
+    <div class="prof-structure">
+      <div class="grid-1-1 nature-header" style="padding-left: 95px;"><strong>{{ localize "ad6_robotech.sheetText.elements" }}</strong>
+      <a title="{{localize "ad6_robotech.sheetText.elementTooltip"}}" class="item-create item" data-type="element"><i class="fas fa-plus faiconcolor"></i></a>
+      </div>
+      <div class="grid-2-1 prof-structure-inner" style="max-height: 90px; overflow-y:scroll; overflow-x: hidden;">
+         {{#if elements }}
+                {{#each elements as |element id|}}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-element.hbs" element}}
+                {{/each}}
+         {{/if}}
+      </div>
+    </div>

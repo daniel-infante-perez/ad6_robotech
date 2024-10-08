@@ -60,6 +60,8 @@
 .grid-1-2-sp2{grid-row: 1; grid-column: 2/span 2;}
 .grid-2-sp2-2{grid-row: 2/ span2; grid-column: 2;}
 
+.grid-1-sp2-1{grid-row: 1/ span 2; grid-column: 1;}
+
 
 
 

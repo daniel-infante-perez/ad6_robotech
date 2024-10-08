@@ -142,54 +142,9 @@
 
     <div>
           
-          <div style="position: absolute; left: 350px; {{ visibleMnDiv }}">
-              <div style="display:grid; grid-template-columns: 92px 90px 90px ">
-                <div class="grid-1-1">
-                  <div>
-                   <div style="float:left">
-                      {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex10 }}  
-                   </div>  
-                      <div style="vertical-align: center; align-content: center;float:left;">
-                        <br><br><a class="item-reset"><i title="{{localize "ad6_robotech.sheetText.resetRollTooltip"}}" class="fas fa-regular fa-rectangle-xmark faiconcolor"></i></a>
-                      </div>
-                      <div style="vertical-align: center; align-content: center;{{ visibleReroll }}">
-                        <br><br><a class="item-reroll"><i title="{{localize "ad6_robotech.sheetText.rerollTooltip"}}" class="fas fa-regular fa-rotate-right faiconcolor"></i></a>
-                      </div>                        
-                    </div>
-                </div>
-
-                <div class="grid-1-2" style="{{ visibleSwDiv }}">
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex9 }}    
-                </div>
-                <div class="grid-1-3" style="{{ visibleSwDiv }}">
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex12 }}    
-                  
-                </div>
-              </div>  
-          </div>
-
-          <div style="position: absolute; left: 350px; {{ visibleLtDiv }}">
-              <div style="display:grid; grid-template-columns: 90px 90px 90px 90px 90px">
-                <div class="grid-1-1">
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex0 }}    
-                </div>
-                <div class="grid-1-2" >
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex1 }}    
-                  
-                </div>
-                <div class="grid-1-3" >
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex2 }}       
-                </div>
-                <div class="grid-1-4" >
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex3 }}       
-                </div>
-                <div class="grid-1-5" >
-                  {{> "systems/ad6_robotech/templates/sheets/partials/hex-gen.hbs" hex4 }}                  
-                </div>
-            </div>
-          </div>
+          
       <div>
-      {{> "systems/ad6_robotech/templates/sheets/partials/character-third-structure.hbs"}}
+      {{> "systems/ad6_robotech/templates/sheets/partials/character-third-vehicle.hbs"}}
     </div>
 
     <div >
