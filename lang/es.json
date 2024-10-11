@@ -161,6 +161,7 @@
             ,"talent": "Talento"
             ,"gear": "Equipo"
             ,"equipmentsuite": "Suite"
+            ,"armorTooltip":"Crear una nueva armadura"
             ,"gearTooltip":"Crear un nuevo equipo"
             ,"suiteTooltip":"Crear una nueva suite de equipo"
             ,"skillTooltip":"Crear una nueva habilidad"

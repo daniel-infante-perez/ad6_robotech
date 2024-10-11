@@ -151,7 +151,7 @@
 
     }
    ,"Item" :{
-         "types":["skill","gear", "equipmentsuite","talent","feature","hardware","element","proficiency"]
+         "types":["skill","gear", "equipmentsuite","talent","feature","hardware","element","proficiency","armor"]
         ,"feature":{"templates":["itemdescription"]}
         ,"hardware":{"templates":["itemdescription"],"status": false, "suite": false}
         ,"stack":{"stack": false}
@@ -170,6 +170,12 @@
         ,"gear":{
             "templates": ["itemdescription", "object", "configinfo"]
            
+        }
+        ,"armor":{
+            "templates": ["itemdescription", "configinfo"]
+            ,"armor":""
+            ,"requisition":""
+            ,"resist":0
         }
         ,"equipmentsuite":{
             "templates": ["itemdescription","object", "configinfo","stack"]

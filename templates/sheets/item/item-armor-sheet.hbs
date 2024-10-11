@@ -1,0 +1,41 @@
+<div style="background-color: white;">
+    <form class='{{cssClass}}' autocomplete='off'>
+    <header class='sheet-header'>
+        <div class='header-fields'>
+        <h1 class='charname'><input
+            name='name'
+            type='text'
+            value='{{item.name}}'
+            placeholder='Name'
+            /></h1>
+        </div>
+    </header>
+
+    <div class="nav-structure">
+        {{> "systems/ad6_robotech/templates/sheets/partials/item-nav.hbs"}}
+        <div class="vitals-left grid-2-1"></div>
+        <div class="grid-2-2" style="padding: 5px;">
+            <section class="sheet-body" >
+                <div class="tab general" data-group="primary" data-tab="general">
+                    <div class="skill-item-structure">
+                        <div class="grid-1-1">{{ localize "ad6_robotech.sheetText.reqExp"}}</div>
+                        <div class="grid-2-1">{{ localize "ad6_robotech.sheetText.armor"}}</div>
+                        <div class="grid-3-1">{{ localize "ad6_robotech.sheetText.resist"}}</div>
+                        <div class="grid-1-2"><input class="transinput uffwid" name="system.requisiton" value="{{system.requisiton}}" data-dtype="String"/></div>
+                        <div class="grid-2-2"><input class="transinput uffwid" name="system.armor" value="{{system.armor}}" data-dtype="String"/></div>
+                        <div class="grid-3-2"><input class="transinput uffwid" name="system.resist" value="{{system.resist}}" data-dtype="String"/></div>
+                    </div>
+                    <br/>
+                    <div>{{editor system.description target="system.description" button=true}} </div>
+                </div>
+             {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}
+            
+            </section>
+        </div>
+
+    
+        <div class="vitals-right grid-2-3"></div>
+    </div>    
+    </form>
+
+</div>

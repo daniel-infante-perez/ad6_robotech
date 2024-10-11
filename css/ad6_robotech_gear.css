@@ -18,6 +18,16 @@
     text-align: center;
   }
 
+  .gear-armor{
+    background-image: url("../charSheet/gear-armor.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 54px 30px;    
+    align-items: baseline;
+    padding-top: 7px;
+    text-align: center;
+  }
+
   .gear-mid{
     background-image: url("../charSheet/gear-mid.png");
     background-position: left top;
@@ -57,7 +67,22 @@
     padding-top: 7px;
     text-align: center;
   }
+  .armor-structure
+  {
+    display:grid;
+    grid-template-columns: 295px 45px 45px ;
+    grid-template-rows: 30px;
+    gap: 3px;
+  }
 
+  
+  .armor-header
+  {
+    display:grid;
+    grid-template-columns: 295px 45px 45px;
+    grid-template-rows: 10px;
+    gap: 3px;
+  }
   .gear-structure
   {
     display:grid;

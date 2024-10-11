@@ -163,6 +163,7 @@
             ,"talent": "Talent"
             ,"gear": "Gear"
             ,"equipmentsuite": "Suite"
+            ,"armorTooltip":"Create new armor"
             ,"gearTooltip":"Create new gear"
             ,"suiteTooltip":"Create new equipment suite"
             ,"skillTooltip":"Create new skill"

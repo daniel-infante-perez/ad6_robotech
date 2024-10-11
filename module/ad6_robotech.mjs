@@ -10,6 +10,7 @@ async function preloadHandlebarsTemplates() {
       // Actor partials.
        'systems/ad6_robotech/templates/sheets/partials/character-skills.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-gear.hbs'
+      ,'systems/ad6_robotech/templates/sheets/partials/character-armor.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-vitals.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-stress.hbs'
       ,'systems/ad6_robotech/templates/sheets/partials/character-wounds.hbs'

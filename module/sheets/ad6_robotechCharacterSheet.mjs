@@ -54,6 +54,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         data.hardwares = this.actor.items.filter(function(item){return item.type=="hardware"});
         data.elements = this.actor.items.filter(function(item){return item.type=="element"});
         data.proficiencies = this.actor.items.filter(function(item){return item.type=="proficiency"});
+        data.armors = this.actor.items.filter(function(item){return item.type=="armor"});
 
         if((this.actor.type=="vehicle")&&(this.actor.system.pilot!=""))
         {

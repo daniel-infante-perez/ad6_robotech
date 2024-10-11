@@ -1,4 +1,17 @@
  <div class="tab items" data-group="primary" data-tab="equipment">
+              {{#if armors }}
+              <div style="display: grid; gap:3px;">
+                <div class="armor-header">
+                  <div class="gear-header-name"></div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.armor"}}</div>
+                  <div class="gear-header-init">{{ localize "ad6_robotech.sheetText.resist"}}</div>
+                </div>
+                {{#each armors as |armor id|}}
+                {{> "systems/ad6_robotech/templates/sheets/partials/character-armor.hbs" armor}}
+                {{/each}}
+              </div>
+              {{/if}}
+  
               {{#if gears }}
               <div style="display: grid; gap:3px;">
                 <div class="gear-header">
