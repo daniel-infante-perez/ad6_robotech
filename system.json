@@ -1,7 +1,7 @@
 {
     "id": "ad6_robotech",
     "title": "Robotech Advantage6",
-    "description": "The Robotech Advantage6 for FoundryVTT! Release v1.0.5 - Assessing",
+    "description": "The Robotech Advantage6 for FoundryVTT! Release v1.0.7 - Assessing",
     "authors": [
       {
         "name": "Daniel Infante",
@@ -12,7 +12,7 @@
       }
     ],
     "url": "https://github.com/daniel-infante-perez/ad6_robotech",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "compatibility": {
       "minimum": 12,
       "verified": "12.331"
@@ -34,6 +34,6 @@
     "packs": [],
     "packFolders": []
     ,"manifest": "https://github.com/daniel-infante-perez/ad6_robotech/releases/latest/download/system.json"
-    ,"download": "https://github.com/daniel-infante-perez/ad6_robotech/archive/refs/tags/v1.0.6.zip"
+    ,"download": "https://github.com/daniel-infante-perez/ad6_robotech/archive/refs/tags/v1.0.7.zip"
   }
   
