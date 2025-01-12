@@ -27,7 +27,7 @@
                         <div class="grid-1-2"><input class="transinput uffwid" name="system.requisiton" value="{{system.requisiton}}" data-dtype="String"/></div>
                         <div class="grid-1-4">
                           <select name="system.range">
-                              {{selectOptions config.ranges selected = system.range  localize=true}}
+                              {{selectOptions config.ranges selected = system.range  localize=true }}
                           </select>  
                         </div>
                         <div class="grid-2-2"><input class="transinput uffwid" name="system.ext" value="{{system.ext}}" data-dtype="String"/></div>
@@ -38,6 +38,7 @@
                     <br/>
                     <div><!--{{editor system.description target="system.description" button="true" editable="editable" engine="prosemirror" }} -->
                         <!--<textarea name="system.description">{{system.description}}</textarea>-->
+                        <!-- cambia a prose-mirror>
                         <prose-mirror name="system.description" value="{{system.description}}" toggled="true">
                             {{{system.description}}}
                             </prose-mirror>
