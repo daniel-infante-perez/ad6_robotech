@@ -85,7 +85,10 @@
           {{> "systems/ad6_robotech/templates/sheets/partials/character-section-talents.hbs"}}
           {{> "systems/ad6_robotech/templates/sheets/partials/character-section-items.hbs"}}
           <div class="tab biography" data-group="primary" data-tab="description">
-            {{editor system.bio target="system.bio" button=true}}
+            <prose-mirror name="system.bio" value="{{system.bio}}" toggled="true">
+                            {{{system.bio}}}
+                            </prose-mirror>
+                            <!--{{editor system.bio target="system.bio" button=true}}-->
           </div>
         </section>
 
