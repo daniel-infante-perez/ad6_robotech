@@ -25,7 +25,11 @@
 
                     </div>
                     <br/>
-                    <div>{{editor system.description target="system.description" button=true}} </div>
+                    <div><!--{{editor system.description target="system.description" button=true}} -->
+                                                <prose-mirror name="system.description" value="{{system.description}}" toggled="true">
+                            {{{system.description}}}
+                            </prose-mirror>
+                    </div>
                 </div>
              {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}
             

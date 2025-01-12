@@ -36,7 +36,12 @@
                         <div class="grid-3-4"><input class="transinput uffwid" name="system.aoe" value="{{system.aoe}}" data-dtype="String"/></div>
                     </div>
                     <br/>
-                    <div>{{editor system.description target="system.description" button=true}} </div>
+                    <div><!--{{editor system.description target="system.description" button="true" editable="editable" engine="prosemirror" }} -->
+                        <!--<textarea name="system.description">{{system.description}}</textarea>-->
+                        <prose-mirror name="system.description" value="{{system.description}}" toggled="true">
+                            {{{system.description}}}
+                            </prose-mirror>
+                    </div>
                 </div>
              {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}
             

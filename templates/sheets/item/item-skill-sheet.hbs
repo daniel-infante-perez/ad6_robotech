@@ -23,7 +23,10 @@
                         <div class="grid-3-1">{{ localize "ad6_robotech.sheetText.value"}}</div><div class="grid-3-2"><input class="transinput midwid" name="system.skill" value="{{system.skill}}" data-dtype="Number"/></div>
                     </div>
                     <br/>
-                    <div>{{editor system.description target="system.description" button=true}} </div>
+                    <div><!--{{editor system.description target="system.description" button=true}}-->
+                                                <prose-mirror name="system.description" value="{{system.description}}" toggled="true">
+                            {{{system.description}}}
+                            </prose-mirror> </div>
                 </div>
              {{> "systems/ad6_robotech/templates/sheets/partials/item-nav-conf.hbs"}}
             
