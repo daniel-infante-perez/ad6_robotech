@@ -12,8 +12,9 @@ Hooks.on("combatRound", () => {
   document.querySelectorAll(".assist-overlay").forEach(el => el.remove());
   game.ad6_assistPools = {};
 });
-
 export function renderAssistOverlay(actorId, value) {
+  if (!value || value <= 0) return;
+
   const div = document.createElement("div");
   div.className = "assist-overlay";
   div.dataset.actorId = actorId;
@@ -22,17 +23,24 @@ export function renderAssistOverlay(actorId, value) {
   div.style.top = `${100 + Object.keys(game.ad6_assistPools).indexOf(actorId) * 60}px`;
   div.style.zIndex = 100;
   div.style.cursor = "move";
+
   div.innerHTML = `
-    <div class="assist-box" style="background: #222; color: white; padding: 8px; border: 1px solid #888; border-radius: 8px;">
-      <span class="assist-name">${game.actors.get(actorId)?.name || "Desconocido"}</span>: 
-      <span class="assist-value">${value}</span>
-      <button class="use-assist" data-amount="1">+1</button>
-      <button class="close-assist" title="Cerrar" style="margin-left: 10px;">❌</button>
+    <div class="assist-box" style="background: #222; color: white; padding: 10px; border: 1px solid #888; border-radius: 8px; display: inline-block;">
+      <div style="margin-bottom: 6px; font-weight: bold; text-align: center;">
+        <span style="margin-right: 6px;">🆘</span>
+        <span class="assist-name">${game.actors.get(actorId)?.name || "Desconocido"}</span>: 
+        <span class="assist-value" style="font-size: 1.4em; color: #00ffff;">${value}</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <button class="use-assist" data-amount="1" style="width: 100%; text-align: center;">Tomar uno <span style="margin-left: 6px;">➕1</span></button>
+        <button class="use-assist-all" style="width: 100%; text-align: center;">Tomar todo <span style="margin-left: 6px;">∞</span></button>
+        <button class="close-assist" title="Cerrar" style="width: 100%; text-align: center;">Cerrar <span style="margin-left: 6px;">❌</span></button>
+      </div>
     </div>`;
 
   document.body.appendChild(div);
 
-  // Movimiento libre
+  // Movimiento del overlay
   let offsetX, offsetY;
   div.addEventListener("mousedown", e => {
     if (!e.target.closest(".assist-box")) return;
@@ -48,61 +56,59 @@ export function renderAssistOverlay(actorId, value) {
     }, { once: true });
   });
 
-  // Cierre
+  // Botón cerrar
   div.querySelector(".close-assist").addEventListener("click", () => {
     div.remove();
     delete game.ad6_assistPools[actorId];
   });
 
-  // Consumo
+  // Botón "Tomar uno"
   div.querySelector(".use-assist").addEventListener("click", async e => {
     const amount = parseInt(e.currentTarget.dataset.amount);
     const poolValue = game.ad6_assistPools[actorId];
-  
     if (!poolValue || poolValue < amount) {
       ui.notifications.warn("No hay suficientes éxitos disponibles.");
       return;
     }
-  
-    // Actualización local inmediata
+
     const newVal = poolValue - amount;
     game.ad6_assistPools[actorId] = newVal;
-  
+
     const valSpan = div.querySelector(".assist-value");
     if (valSpan) valSpan.textContent = newVal;
     if (newVal <= 0) div.remove();
-  
-    // Modificar mensaje local del consumidor
+
     const lastMsg = [...game.messages].reverse().find(m =>
-      m.author?.id === game.user.id &&
-      m.flags?.["ad6_robotech"]?.successes != null
+      m.author?.id === game.user.id && m.flags?.["ad6_robotech"]?.successes != null
     );
-  
+
     if (lastMsg) {
-      const extra = (lastMsg.flags["ad6_robotech"].assistUsed || 0) + amount;
-      const totalOriginal = lastMsg.flags["ad6_robotech"].successes || 0;
-      const newTotal = totalOriginal + extra;
-  
+      const currentDisplayed = parseInt(lastMsg.content.match(/<strong>(\d+)<\/strong>/)?.[1] || "0", 10);
+      const newTotal = currentDisplayed + amount;
+
       const newContent = lastMsg.content.replace(
         /(<strong>)(\d+)(<\/strong>)([^<]*)/i,
         (_, pre, val, post, suffix) => `${pre}${newTotal}${post}${suffix}`
       );
-  
+
+      const previousAssistUsed = lastMsg.flags["ad6_robotech"].assistUsed || 0;
+
       await lastMsg.update({
         flags: {
           ...lastMsg.flags,
           "ad6_robotech": {
             ...lastMsg.flags["ad6_robotech"],
-            assistUsed: extra
+            assistUsed: previousAssistUsed + amount
           }
         },
         content: newContent
       });
     }
-  
-    // 🔁 NUEVO: Propagación del consumo a todos
+
+    const consumer = game.user.character || canvas.tokens.controlled[0]?.actor;
+    const actorName = consumer?.name || game.user.name;
     ChatMessage.create({
-      content: "", // mensaje oculto
+      content: `<em>${actorName} toma ${amount} del pool de Assist.</em>`,
       whisper: game.users.contents.map(u => u.id),
       flags: {
         ad6_robotech: {
@@ -113,5 +119,62 @@ export function renderAssistOverlay(actorId, value) {
       }
     });
   });
-  
+
+  // Botón "Tomar todo"
+  div.querySelector(".use-assist-all").addEventListener("click", async () => {
+    const poolValue = game.ad6_assistPools[actorId];
+    if (!poolValue || poolValue <= 0) {
+      ui.notifications.warn("No hay éxitos restantes.");
+      return;
+    }
+
+    const amount = poolValue;
+    const newVal = 0;
+    game.ad6_assistPools[actorId] = newVal;
+
+    const valSpan = div.querySelector(".assist-value");
+    if (valSpan) valSpan.textContent = newVal;
+    div.remove();
+
+    const lastMsg = [...game.messages].reverse().find(m =>
+      m.author?.id === game.user.id && m.flags?.["ad6_robotech"]?.successes != null
+    );
+
+    if (lastMsg) {
+      const currentDisplayed = parseInt(lastMsg.content.match(/<strong>(\d+)<\/strong>/)?.[1] || "0", 10);
+      const newTotal = currentDisplayed + amount;
+
+      const newContent = lastMsg.content.replace(
+        /(<strong>)(\d+)(<\/strong>)([^<]*)/i,
+        (_, pre, val, post, suffix) => `${pre}${newTotal}${post}${suffix}`
+      );
+
+      const previousAssistUsed = lastMsg.flags["ad6_robotech"].assistUsed || 0;
+
+      await lastMsg.update({
+        flags: {
+          ...lastMsg.flags,
+          "ad6_robotech": {
+            ...lastMsg.flags["ad6_robotech"],
+            assistUsed: previousAssistUsed + amount
+          }
+        },
+        content: newContent
+      });
+    }
+
+    const consumer = game.user.character || canvas.tokens.controlled[0]?.actor;
+    const actorName = consumer?.name || game.user.name;
+    ChatMessage.create({
+      content: `<em>${actorName} toma ${amount} del pool de Assist.</em>`,
+      whisper: game.users.contents.map(u => u.id),
+      flags: {
+        ad6_robotech: {
+          assistConsumed: true,
+          actorId,
+          newValue: newVal
+        }
+      }
+    });
+  });
 }
