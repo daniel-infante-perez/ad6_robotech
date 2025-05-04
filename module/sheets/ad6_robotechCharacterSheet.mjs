@@ -249,6 +249,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
             html.find(".stack").click(this._onStackClick.bind(this));
             html.find(".item-reset").click(this._onResetRoll.bind(this));
             html.find(".item-reroll").click(this._onReroll.bind(this));
+            html.find(".equip").click(this._onEquip.bind(this));
             
     }
 
@@ -408,6 +409,22 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
             item.update({"system.stack":!item.system.stack});
         }
         
+    }
+
+    _onEquip(event)
+    {
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        let target = element.closest(".item").dataset.target;
+        let item = this.actor.items.get(itemId);
+       /* console.log("--->");
+        console.log(target);
+        console.log("--->");
+        console.log(item);*/
+        
+        //if(target=="system.equip")
+            item.update({"system.equip":!item.system.equip});
     }
     
     _onHardwareStatus(event)
@@ -634,6 +651,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
         }
         coreCheck(dados, phase,rollType,name,owner,m);
 
+        if (this.actor.system.reroll){
         // guardar última tirada, para reroll rápido
         this.actor.system.reroll.dice = dados;
         this.actor.system.reroll.phase = phase;
@@ -650,7 +668,7 @@ export default class ad6_robotechCharacterSheet extends ActorSheet{
             "system.reroll.owner": owner,
             "system.reroll.message": m
         });
-
+        }
 
         //
         // consumir los items de equipo que estuvieren marcados

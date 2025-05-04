@@ -313,3 +313,53 @@
 
 
 .window-content .window-app{ background-color: white;  background-image: none; }
+
+
+.ad6-damage-dialog {
+  background: #2e2e2e !important;
+  color: #f0f0f0;
+  border: 1px solid #888;
+  box-shadow: 0 0 10px #000;
+}
+
+.ad6-damage-dialog .window-content {
+  background: #2e2e2e !important;
+  color: #f0f0f0;
+}
+
+.ad6-damage-dialog button {
+  background: #444;
+  border: 1px solid #666;
+  color: #f0f0f0;
+  text-shadow: none;
+}
+
+.ad6-damage-dialog button:hover {
+  background: #555;
+  border-color: #999;
+  color: #fff;
+}
+
+.ad6-dark-select {
+  background-color: #2e2e2e !important;
+  color: #f0f0f0 !important;
+  border: 1px solid #555;
+  padding: 4px;
+  width: 100%;
+}
+
+.ad6-dark-select option {
+  background-color: #2e2e2e;
+  color: #f0f0f0;
+}
+
+.x2-tag {
+  background-color: #ccc;
+  border-radius: 4px;
+  padding: 0 4px;
+  margin-left: 4px;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: #000;
+}
+

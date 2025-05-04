@@ -18,7 +18,8 @@
       "verified": "12.331"
     },
     "esmodules": ["module/ad6_robotech.mjs"],
-    "styles": ["css/ad6_robotech.css"],
+    "styles": ["css/ad6_robotech.css","css/phases.css"],
+    "templates": ["templates/phases.hbs"],
     "languages": [
       {
         "lang": "en",  

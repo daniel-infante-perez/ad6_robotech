@@ -1,0 +1,143 @@
+  <!--<div class="phases-controls">
+    <button class="confirm-actions">Confirmar acciones</button>
+     {{#if isGM}}
+    <button class="reset-actions">Reiniciar</button>
+    {{/if}}
+    <button class="refresh-actions">Refrescar</button>
+    
+  </div> -->
+  <!--<div class="confirmed-users">
+    <strong>Confirmados:</strong> {{#each confirmedUsers}}<span class="user-confirmed">{{this}}</span> {{/each}}
+  </div>-->
+
+
+<!-- GRID por columnas -->
+<div class="phases-grid">
+  <!-- Encabezados -->
+  <div class="phase-header">{{localize "ad6_robotech.phase.support"}}</div>
+  <div class="phase-header">{{localize "ad6_robotech.phase.operations"}}</div>
+  <div class="phase-header">{{localize "ad6_robotech.phase.cinematic"}}</div>
+
+  <!-- Subfase 1 -->
+  <div class="phase-cell" data-phase="Soporte" data-subphase="{{lookup subphases.Soporte 0}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Soporte 0))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Soporte-" (lookup ../subphases.Soporte 0)))}}
+        {{#each this}}
+<!--          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if this.isConfirmed}} ✅{{/if}}
+          </div>-->
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>          
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <div class="phase-cell" data-phase="Operaciones" data-subphase="{{lookup subphases.Operaciones 0}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Operaciones 0))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Operaciones-" (lookup ../subphases.Operaciones 0)))}}
+        {{#each this}}
+          <!--          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if this.isConfirmed}} ✅{{/if}}
+          </div>-->
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <div class="phase-cell" data-phase="Cinematica" data-subphase="{{lookup subphases.Cinematica 0}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Cinematica 0))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Cinematica-" (lookup ../subphases.Cinematica 0)))}}
+        {{#each this}}
+
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <!-- Subfase 2 -->
+  <div class="phase-cell" data-phase="Soporte" data-subphase="{{lookup subphases.Soporte 1}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Soporte 1))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Soporte-" (lookup ../subphases.Soporte 1)))}}
+        {{#each this}}
+
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <div class="phase-cell" data-phase="Operaciones" data-subphase="{{lookup subphases.Operaciones 1}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Operaciones 1))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Operaciones-" (lookup ../subphases.Operaciones 1)))}}
+        {{#each this}}
+
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <div class="phase-cell" data-phase="Cinematica" data-subphase="{{lookup subphases.Cinematica 1}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Cinematica 1))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Cinematica-" (lookup ../subphases.Cinematica 1)))}}
+        {{#each this}}
+
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <!-- Subfase 3 (solo Soporte y Operaciones) -->
+  <div class="phase-cell" data-phase="Soporte" data-subphase="{{lookup subphases.Soporte 2}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Soporte 2))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Soporte-" (lookup ../subphases.Soporte 2)))}}
+        {{#each this}}
+
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <div class="phase-cell" data-phase="Operaciones" data-subphase="{{lookup subphases.Operaciones 2}}">
+    <strong>{{localize (concat "ad6_robotech.phase." (lookup subphases.Operaciones 2))}}</strong>
+    {{#each assignments}}
+      {{#if (eq @key (concat "Operaciones-" (lookup ../subphases.Operaciones 2)))}}
+        {{#each this}}
+
+          <div class="actor-name" style="background-color: {{getUserColor this.userId}}">
+            {{this.name}}{{#if (eq this.count 2)}} <span class="x2-tag">x2</span>{{/if}}{{#if (isConfirmed this.userId)}} ✅{{/if}}
+          </div>    
+        {{/each}}
+      {{/if}}
+    {{/each}}
+  </div>
+
+  <!-- Celda vacía para Cinematica -->
+  <div class="phase-cell empty-cell"></div>
+</div>
+

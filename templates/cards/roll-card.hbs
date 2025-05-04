@@ -8,4 +8,9 @@
             <div class ="dice-{{die.total}}" style="height:30px; width: 30px; text-align: center;"></div>
             {{/each}}
     </div>
+       {{#if (and (userHasActor) (hasTarget))}}
+        <div style="padding-left:13px; margin-top:10px;">
+            <button class="apply-damage-button" data-successes="{{successes}}">Aplicar Daño</button>
+        </div>
+    {{/if}}
 </div>

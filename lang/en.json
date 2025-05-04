@@ -4,13 +4,24 @@
     {
         "phase":{
             "support": "Support"
+            ,"operations": "Ops"
+            ,"cinematic": "Cinematic"
             ,"assist": "Assist"
             ,"obscure": "Obscure"
+            ,"observe": "Observe"
             ,"attack": "Attack"
             ,"defend": "Defend"
             ,"redirect": "Redirect"
             ,"inhibit": "Inhibit"
             ,"interact": "Interact"
+            ,"Asistir": "Assist"
+            ,"Ocultar": "Obscure"
+            ,"Observar": "Observe"
+            ,"Atacar": "Attack"
+            ,"Defender": "Defend"
+            ,"Redirigir": "Redirect"
+            ,"Inhibir": "Inhibit"
+            ,"Interactuar": "Interact"
         }
         ,"rollT":
         {

@@ -155,6 +155,7 @@
         ,"feature":{"templates":["itemdescription"]}
         ,"hardware":{"templates":["itemdescription"],"status": false, "suite": false}
         ,"stack":{"stack": false}
+        ,"equip":{"equip": false}
         ,"templates":{
              "itemdescription":{ "description":"", "image":"" }
             
@@ -172,7 +173,7 @@
            
         }
         ,"armor":{
-            "templates": ["itemdescription", "configinfo"]
+            "templates": ["itemdescription", "configinfo","equip"]
             ,"armor":""
             ,"requisition":""
             ,"resist":0

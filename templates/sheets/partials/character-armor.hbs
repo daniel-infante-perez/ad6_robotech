@@ -1,11 +1,14 @@
 <div class="gear-border armor-structure">
-        <div class="gear-name gear-card item" style="display: grid; grid-template-columns:15px 254px 13px 13px" data-item-id="{{_id}}">
+        <div class="gear-name gear-card item" style="display: grid; grid-template-columns:15px 230px 13px 13px 13px" data-item-id="{{_id}}">
             <div style="padding-top: 7px;"><a class="item-delete"><i class="fas fa-trash faiconcolor fa-sm"></i></a></div>
                 <div class="item" data-item-id="{{_id}}" data-field="name">
                     <input style="text-align: left;" class=" morwid invinput change" value="{{name}}"/>
                 </div>
             <div style="padding-top: 7px;"><a class="item-description"><i class="fas fa-comment faiconcolor fa-sm"></i></a></div>
             <div style="padding-top: 7px;"><a class="item-edit"><i class="fas fa-regular fa-pen-to-square faiconcolor fa-sm"></i></a></div>
+            <div  data-item-id="{{_id}}" style="align-items: left;" data-target="system.equip">
+                <input style="margin-left:0px;" class="smachk equip" type="checkbox" {{checked system.equip}}/>
+            </div>
         </div>
         <div class="gear-init item" data-item-id="{{_id}}" data-field="system.armor">
             <input style="text-align: center;" class=" uffwid invinput change" value="{{system.armor}}"/>
@@ -15,7 +18,6 @@
         </div>
       
     </div>
-
 
 
 
